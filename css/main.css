@@ -1,4 +1,101 @@
+@font-face {
+    font-family: BoisuFull;
+    src: url(../assets/fonts/Boisu-Full.otf);
+}
+@font-face {
+    font-family: BoisuStroke;
+    src: url(../assets/fonts/Boisu-Stroke.otf);
+}
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;700&display=swap');
+
 * {
     box-sizing: border-box;
     margin: 0;
 }
+:root {
+    --headerFont-h1: BoisuStroke;
+    --headerFont-hx: BoisuFull;
+
+    --base-color: 213, 55%;
+    --color-main-20: hsla(var(--base-color), 13%, 100%);
+    --color-main-50: hsla(var(--base-color), 33%, 100%);
+    --color-main-80: hsla(213, 81%, 80%, 100%);
+
+    --base-accent: 22;
+    --color-accent-high: hsl(var(--base-accent),89% , 55%);
+    --color-accent-low: hsl(var(--base-accent),82% , 71%);
+}
+body {
+    font-family: 'Josefin sans', sans-serif;
+    font-size: 16px;
+    color: var(--color-main-20);
+    max-width: 100vw;
+    min-width: 23em;
+}
+
+/* Mobile setup */
+
+header {
+    position: relative;
+    height: 31.68em;
+    padding: 30px;
+    background:
+        linear-gradient(var(--color-accent-high), hsla(22, 81%, 59%, 35%)),
+        url(../assets/images/toa-heftiba-412579.jpg),
+        no-repeat;
+    background-size: cover
+}
+.hamburger {
+    top: -12px;
+    float: right;
+    position: relative;
+    height: 2px;
+    width: 15px;
+    background-color: var(--color-main-20);
+}
+.hamburger::before,
+.hamburger::after {
+    position: absolute;
+    content: '';
+    height: 2px;
+    width: 15px;
+    background-color: var(--color-main-20);
+}
+.hamburger::before {
+    top: -5px;
+}
+.hamburger::after {
+    top: 5px;
+}
+nav, #checkbx {
+    display: none;
+}
+#checkbx:checked ~ nav {
+    display: block;
+}
+nav {
+    position: fixed;
+}
+
+h1 {
+    display: grid;
+    height: 20rem;
+    max-width: 31rem;
+    place-items: center;
+    font-family: var(--headerFont-h1);
+    font-size: 3em;
+}
+.cta-style__blue {
+    background-color: var(--color-main-20);
+    color: var(--color-accent-high);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.4);
+}
+.cta-btn__blue--big {
+    width: 9rem;
+    height: 3.25rem;
+    padding: 1.2rem 3rem;
+}
+
