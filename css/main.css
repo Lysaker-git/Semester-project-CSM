@@ -93,10 +93,14 @@ h1 {
     text-decoration: none;
     text-transform: uppercase;
     font-weight: 700;
+    font-family: var(--headerFont-hx);
+    font-size: 1.4em
 }
 .cta-style__neutral {
     text-transform: uppercase;
     font-weight: 700;
+    font-family: var(--headerFont-hx);
+    font-size: 1.4em;
 }
 .cta-btn__blue--big {
     width: 9rem;
@@ -109,7 +113,7 @@ main {
 }
 h2 {
     text-transform: uppercase;
-    font-size: var(--headerFont-hx);
+    font-family: var(--headerFont-hx);
     font-size: 1.7em;
 }
 .news-cards__img,
@@ -137,11 +141,26 @@ h2 {
 }
 .news-cards__bar--text,
 .exhibitions-cards__bar--text {
-    padding: 20px 20px;
+    padding: 15px 20px;
     height: 100%;
     align-self: center;
 }
 .exhibitions-cards__bar {
     display: flex;
     height: 57px;
+}
+
+.info {
+    margin-top: 200px;
+    position: relative;
+}
+.info::before {
+    content: '';
+    background-image: url(../assets/images/small-decor-top.svg);
+    top: -180px;
+    left: -170px;
+    right: -60px;
+    width: 600px;
+    position: absolute;
+    height: 326px;
 }
