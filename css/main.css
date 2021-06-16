@@ -93,12 +93,16 @@ h1 {
     text-decoration: none;
     text-transform: uppercase;
     font-weight: 700;
-    box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.4);
+}
+.cta-style__neutral {
+    text-transform: uppercase;
+    font-weight: 700;
 }
 .cta-btn__blue--big {
     width: 9rem;
     height: 3.25rem;
     padding: 1.2rem 3rem;
+    box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.4);
 }
 main {
     margin: 0 30px; 
@@ -108,19 +112,22 @@ h2 {
     font-size: var(--headerFont-hx);
     font-size: 1.7em;
 }
-.news-cards__img {
+.news-cards__img,
+.exhibitions-cards__img {
     display: block;
     width: 100%;
     height: 209px;
 }
-.news-cards {
+.news-cards,
+.exhibitions-cards {
     height: 266px;
     margin-bottom: 30px;
     box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.4);
     transition: transform .3s;
     cursor: pointer;
 }
-.news-cards:hover {
+.news-cards:hover,
+.exhibitions-cards:hover {
     transform: scale(1.02);
 }
 .news-cards__bar {
@@ -128,14 +135,13 @@ h2 {
     display: flex;
     background-color: var(--color-main-20);
 }
-.news-cards__bar--text {
+.news-cards__bar--text,
+.exhibitions-cards__bar--text {
     padding: 20px 20px;
     height: 100%;
     align-self: center;
-    box-shadow: unset;
 }
-.news-cards__bar--arrow {
-    width: 30px;
+.exhibitions-cards__bar {
+    display: flex;
     height: 57px;
-    background
 }
