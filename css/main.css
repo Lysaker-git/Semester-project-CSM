@@ -20,6 +20,7 @@
 
     --base-color: 213, 55%;
     --color-main-20: hsla(var(--base-color), 13%, 100%);
+    --color-main-20-no-alpha: hsl(var(--base-color), 13%);
     --color-main-50: hsla(var(--base-color), 33%, 100%);
 
     --base-accent: 22;
@@ -108,7 +109,9 @@ h1 {
     padding: 1.2rem 3rem;
     box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.4);
 }
-main {
+.news,
+.misc,
+.exhibitions {
     margin: 0 30px; 
 }
 h2 {
@@ -153,14 +156,114 @@ h2 {
 .info {
     margin-top: 200px;
     position: relative;
+    color: var(--color-accent-high);
+    background: var(--color-main-20);
 }
 .info::before {
     content: '';
     background-image: url(../assets/images/small-decor-top.svg);
     top: -180px;
-    left: -170px;
+    left: -95px;
     right: -60px;
     width: 600px;
     position: absolute;
     height: 326px;
+    z-index: -2;
+}
+.info::after {
+    content: '';
+    background-image: url(../assets/images/small-decor__bottom.svg);
+    bottom: -95px;
+    left: -95px;
+    right: -60px;
+    width: 600px;
+    position: absolute;
+    height: 326px;
+    z-index: -2;
+    rotate: 180deg;
+}
+.info-header {
+    padding: 30px 0 40px 30px;
+}
+.info-cards {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: max-content;
+    min-height: 80vh;
+    padding: 0 30px;
+    justify-content: center;
+    z-index: 1;
+    box-shadow: 
+        inset 35vw 0 20vw var(--color-main-20),
+        inset 0 10vw 5vw var(--color-main-20),
+        inset 0 -10vw 5vw var(--color-main-20);
+}
+.info-cards__header {
+    position: relative;
+    width: max-content;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    font-family: var(--headerFont-hx);
+    font-size: 1.3rem;
+}
+.info-cards__header::before {
+    position: absolute;
+    display: block;
+    content:'';
+    height: 2px;
+    width: 100%;
+    background-color: var(--color-accent-high);
+    bottom: 0;
+}
+.info-cards__text {
+    padding-bottom: 20px;
+    line-height: 1.3em;
+    max-width: 60%;
+    font-size: .85rem;
+    color: #F2A579;
+    font-weight: 300;
+}
+.info-cards__cta {
+    width: max-content;
+    border: 2px solid var(--color-accent-high);
+    padding: 10px 20px 6px;
+    color: var(--color-main-20);
+    background: var(--color-accent-high);
+    text-transform: uppercase;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+.info-cards__cta:hover {
+    border: 2px solid var(--color-accent-high);
+    background: var(--color-main-20);
+    color: var(--color-accent-high);
+}
+.kids {
+    background: 
+        linear-gradient(.25deg, hsla(213,55%, 13%, 100%), hsla(213, 55%, 13%, 40%)),
+        url(../assets/images/pexels-monstera-5063444.jpg),
+        no-repeat;
+    background-size: cover;
+}
+.teachers {
+    background: 
+    linear-gradient(.25deg, hsla(213,55%, 13%, 100%), hsla(213, 55%, 13%, 40%)),
+    url(../assets/images/luke-ellis-craven-400722.jpg),
+    no-repeat;
+    background-size: cover;
+    background-position-x: 50px;
+}
+.researcher {
+    background: 
+    linear-gradient(.25deg, hsla(213,55%, 13%, 100%), hsla(213, 55%, 13%, 40%)),
+    url(../assets/images/billetto-editorial-334686.jpg),
+    no-repeat;
+    background-size: cover;
+    background-position-x: -200px;
+}
+
+.misc {
+    margin-top: 200px;
 }
