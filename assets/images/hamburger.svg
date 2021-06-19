@@ -1,0 +1,12 @@
+<svg id="hamburger" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+  <g id="invisible_box" data-name="invisible box">
+    <rect id="Rectangle_192" data-name="Rectangle 192" width="48" height="48" fill="none"/>
+  </g>
+  <g id="icons_Q2" data-name="icons Q2">
+    <g id="Group_82" data-name="Group 82">
+      <path id="Path_627" data-name="Path 627" d="M42,12a2,2,0,0,1-2,2H8a2,2,0,0,1-2-2H6a2,2,0,0,1,2-2H40A2,2,0,0,1,42,12Z" fill="#0f1f33"/>
+      <path id="Path_628" data-name="Path 628" d="M42,24a2,2,0,0,1-2,2H8a2,2,0,0,1-2-2H6a2,2,0,0,1,2-2H40A2,2,0,0,1,42,24Z" fill="#0f1f33"/>
+      <path id="Path_629" data-name="Path 629" d="M42,36a2,2,0,0,1-2,2H8a2,2,0,0,1-2-2H6a2,2,0,0,1,2-2H40A2,2,0,0,1,42,36Z" fill="#0f1f33"/>
+    </g>
+  </g>
+</svg>

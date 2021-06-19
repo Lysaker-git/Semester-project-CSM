@@ -53,37 +53,62 @@ header {
     background-size: cover
 }
 .hamburger {
-    top: -12px;
+    cursor: pointer;
     float: right;
-    position: relative;
-    height: 2px;
-    width: 15px;
-    background-color: var(--color-main-20);
-}
-.hamburger::before,
-.hamburger::after {
     position: absolute;
-    content: '';
-    height: 2px;
-    width: 15px;
-    background-color: var(--color-main-20);
+    right: 15px;
+    top: 13px;
+    transform: scale(0.4);
 }
-.hamburger::before {
-    top: -5px;
-}
-.hamburger::after {
-    top: 5px;
-}
-nav, #checkbx {
+#checkbx {
     display: none;
 }
 #checkbx:checked ~ nav {
     display: block;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    transition: all .3s;
 }
 nav {
     position: fixed;
+    top: 0;
+    width: 100%;
+    left: -500px;
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.4);
+    transition: all .3s;
+    background: var(--color-accent-high);
 }
-
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+nav ul li {
+    margin: 20px auto;
+    padding: 5px 20px 0;
+    width: max-content;
+    display: block;
+    font-size: 2rem;
+    font-weight: 300;
+    text-align: center;
+    transition: transform .3s, background 1s;
+}
+nav ul li:hover {
+    transform: translateY(-3px);
+    background: var(--color-accent-low);
+}
+.nav-item {
+    color: var(--color-main-20);
+    text-decoration: none;
+    text-transform: uppercase;
+}
+#close-nav {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 15px;
+}
 h1 {
     display: grid;
     height: 20rem;
@@ -127,6 +152,7 @@ h2 {
 .exhibitions-cards__img,
 .misc-bottom__img {
     display: block;
+    object-fit: cover;
     width: 100%;
     height: 209px;
 }
@@ -407,6 +433,7 @@ footer > * {
 .socials-icons {
     display: flex;
     justify-content: space-between;
+    margin-top: 10px;
 }
 .copy {
     grid-area: copy;
