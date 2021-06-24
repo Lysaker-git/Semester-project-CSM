@@ -10,10 +10,12 @@
 </head>
 <body>
     <header>
-        <div class="logo">CSM</div>
-        <label for="checkbx" class="hamburger" alt="Open navigation">
-            <img src="assets/images/hamburger.svg" alt="Open navigation">
-        </label>
+        <div class="parting-nav">
+            <div class="logo">CSM</div>
+            <label for="checkbx" class="hamburger" alt="Open navigation">
+                <img src="assets/images/hamburger.svg" alt="Open navigation">
+            </label>
+        </div>
         <input type="checkbox" name="hamburger" id="checkbx">
         <nav>
             <label for="checkbx" id="close-nav">
@@ -34,60 +36,60 @@
     <main>
         <section class="news">
             <h2>special events</h2>
-            <!-- Using JS onclick event to avoid more markup like nesting a A element around the card -->
-                <div onclick="location.href='exhibitionsnews.html'" class="news-cards">
-                    <img class="news-cards__img" src="assets/images/linkedin-sales-solutions-QgYvORVDdd8-unsplash.jpg" alt="Prof Shiela Widnall standing at a desk">
-                    <div class="news-cards__bar">
-                        <p class="news-cards__bar--text cta-style__blue">prof shiela w.</p>
+            <div class="grid-content__news">
+                <!-- Using JS onclick event to avoid more markup like nesting a A element around the card -->
+                    <div onclick="location.href='exhibitionsnews.html'" class="news-cards">
+                        <img class="news-cards__img" src="assets/images/linkedin-sales-solutions-QgYvORVDdd8-unsplash.jpg" alt="Prof Shiela Widnall standing at a desk">
+                        <div class="news-cards__bar">
+                            <p class="news-cards__bar--text cta-style__blue">prof shiela w.</p>
+                        </div>
                     </div>
-                </div>
-            <a href="exhibitionsnews.html">
-                <div class="news-cards">
-                    <img class="news-cards__img" src="assets/images/alexandra-k-UPm7_esiLmY-unsplash.jpg" alt="Chandelair in ceiling to light up the night at museum">
-                    <div class="news-cards__bar">
-                        <p class="news-cards__bar--text cta-style__blue">night at museum</p>
+                    <div onclick="location.href='exhibitionsnews.html'" class="news-cards">
+                        <img class="news-cards__img" src="assets/images/alexandra-k-UPm7_esiLmY-unsplash.jpg" alt="Chandelair in ceiling to light up the night at museum">
+                        <div class="news-cards__bar">
+                            <p class="news-cards__bar--text cta-style__blue">night at museum</p>
+                        </div>
                     </div>
-                </div>
-            </a>
-            <a href="exhibitionsnews.html">
-                <div class="news-cards">
-                    <img class="news-cards__img" src="assets/images/sungrow-emea-ceTSHQ0qars-unsplash.jpg" alt="Green energy solar planets">
-                    <div class="news-cards__bar">
-                        <p class="news-cards__bar--text cta-style__blue">energetica exhibition</p>
+                    <div onclick="location.href='exhibitionsnews.html'" class="news-cards">
+                        <img class="news-cards__img" src="assets/images/sungrow-emea-ceTSHQ0qars-unsplash.jpg" alt="Green energy solar planets">
+                        <div class="news-cards__bar">
+                            <p class="news-cards__bar--text cta-style__blue">energetica exhibition</p>
+                        </div>
                     </div>
-                </div>
-            </a>
+            </div>
         </section>
         <section class="exhibitions">
             <h2 class="exhibitions-header">other exhibitions</h2>
-            <div onclick="location.href='exhibitions.html'" class="exhibitions-cards cta-style__neutral">
-                <img class="exhibitions-cards__img" src="assets/images/celso-405219.jpg" alt="Planets on a row in a dark universe">
-                <div class="exhibitions-cards__bar">
-                    <p class="exhibitions-cards__bar--text">cosmology</p>
+            <div class="grid-content__exhib">
+                <div onclick="location.href='exhibitions.html'" class="exhibitions-cards cta-style__neutral">
+                    <img class="exhibitions-cards__img" src="assets/images/celso-405219.jpg" alt="Planets on a row in a dark universe">
+                    <div class="exhibitions-cards__bar">
+                        <p class="exhibitions-cards__bar--text">cosmology</p>
+                    </div>
                 </div>
-            </div>
-            <div onclick="location.href='exhibitions.html'" class="exhibitions-cards cta-style__neutral">
-                <img class="exhibitions-cards__img" src="assets/images/mammoth-1257288_1920.jpg" alt="Skeletal mammoth on a exhibition">
-                <div class="exhibitions-cards__bar">
-                    <p class="exhibitions-cards__bar--text">evolution</p>
+                <div onclick="location.href='exhibitions.html'" class="exhibitions-cards cta-style__neutral">
+                    <img class="exhibitions-cards__img" src="assets/images/mammoth-1257288_1920.jpg" alt="Skeletal mammoth on a exhibition">
+                    <div class="exhibitions-cards__bar">
+                        <p class="exhibitions-cards__bar--text">evolution</p>
+                    </div>
                 </div>
-            </div>
-            <div onclick="location.href='exhibitions.html'" class="exhibitions-cards cta-style__neutral">
-                <img class="exhibitions-cards__img" src="assets/images/jesse-orrico-60373.jpg" alt="a skinless head-sculpture showing biology">
-                <div class="exhibitions-cards__bar">
-                    <p class="exhibitions-cards__bar--text">bio and medicine</p>
+                <div onclick="location.href='exhibitions.html'" class="exhibitions-cards cta-style__neutral">
+                    <img class="exhibitions-cards__img" src="assets/images/jesse-orrico-60373.jpg" alt="a skinless head-sculpture showing biology">
+                    <div class="exhibitions-cards__bar">
+                        <p class="exhibitions-cards__bar--text">bio and medicine</p>
+                    </div>
                 </div>
-            </div>
-            <div onclick="location.href='exhibitions.html'" class="exhibitions-cards cta-style__neutral">
-                <img class="exhibitions-cards__img" src="assets/images/william-bout-264826.jpg" alt="interlocking wires in a molecular fashion">
-                <div class="exhibitions-cards__bar">
-                    <p class="exhibitions-cards__bar--text">robotics and ai</p>
+                <div onclick="location.href='exhibitions.html'" class="exhibitions-cards cta-style__neutral">
+                    <img class="exhibitions-cards__img" src="assets/images/william-bout-264826.jpg" alt="interlocking wires in a molecular fashion">
+                    <div class="exhibitions-cards__bar">
+                        <p class="exhibitions-cards__bar--text">robotics and ai</p>
+                    </div>
                 </div>
-            </div>
-            <div onclick="location.href='exhibitions.html'" class="exhibitions-cards cta-style__neutral">
-                <img class="exhibitions-cards__img" src="assets/images/sharon-mccutcheon-2eAkk5lIkC8-unsplash.jpg" alt="interlocking wires in a molecular fashion">
-                <div class="exhibitions-cards__bar">
-                    <p class="exhibitions-cards__bar--text">ecology</p>
+                <div onclick="location.href='exhibitions.html'" class="exhibitions-cards cta-style__neutral">
+                    <img class="exhibitions-cards__img" src="assets/images/sharon-mccutcheon-2eAkk5lIkC8-unsplash.jpg" alt="interlocking wires in a molecular fashion">
+                    <div class="exhibitions-cards__bar">
+                        <p class="exhibitions-cards__bar--text">ecology</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -183,7 +185,7 @@
     <footer>
         <section class="links">
             <div class="links-divider">
-                <h3 class="links-header">information</h3>
+                <h3 class="links-header links-header__info">information</h3>
                 <ul>
                     <li class="links-items"><a href="#">home</a></li>
                     <li class="links-items"><a href="#">for kids</a></li>
@@ -192,7 +194,7 @@
                 </ul>
             </div>
             <div class="links-divider">
-                <h3 class="links-header">interaction</h3>
+                <h3 class="links-header links-header__inter">interaction</h3>
                 <ul>
                     <li class="links-items"><a href="#">book tickets</a></li>
                     <li class="links-items"><a href="#">contact us</a></li>
@@ -201,7 +203,7 @@
                 </ul>
             </div>
             <div class="links-divider">
-                <h3 class="links-header">other topics</h3>
+                <h3 class="links-header links-header__other">other topics</h3>
                 <ul>
                     <li class="links-items"><a href="#">accessibillity</a></li>
                     <li class="links-items"><a href="#">privacy policy</a></li>
