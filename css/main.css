@@ -17,7 +17,7 @@
     --headerFont-hx: BoisuFull;
     --mainFont: 'Josefin Sans', sans-serif;
     --font-size: 1rem;
-    font-size: clamp(var(--font-size), 1rem, 2rem);
+    font-size: var(--font-size);
 
     --base-color: 213, 55%;
     --color-main-20: hsla(var(--base-color), 13%, 100%);
@@ -32,24 +32,32 @@ html {
     overflow-x: hidden;
 }
 body {
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
     font-family: var(--mainFont);
     color: var(--color-main-20);
-    max-width: 100vw;
+    max-width: clamp(375px, 100vw, 1200px);
     overflow-x: hidden;
 }
-
+.kids-margin {
+    max-width: clamp(375px, 100vw, 1200px);
+}
 /* Mobile setup */
 
 header {
     position: relative;
-    padding: 2.2rem;
-    min-height: 30rem;
+    padding: 0 2.7rem;
+    min-height: fit-content;
     margin-bottom: 5em;
     background:
         linear-gradient(var(--color-accent-high), hsla(22, 81%, 59%, 35%)),
         url(../assets/images/toa-heftiba-412579.jpg),
         no-repeat;
     background-size: cover;
+}
+.header-height {
+    padding: 2em 0;
 }
 .hamburger {
     cursor: pointer;
@@ -58,6 +66,7 @@ header {
 .parting-nav {
     display: flex;
     align-items: center;
+    height: 32px;
 }
 .logo {
     margin-right: auto;
@@ -120,6 +129,7 @@ h1 {
     place-items: center;
     font-family: var(--headerFont-h1);
     font-size: 3rem;
+    text-transform: uppercase;
 }
 .cta-style__blue {
     background-color: var(--color-main-20);
@@ -137,6 +147,8 @@ h1 {
     font-size: 1.4rem;
 }
 .cta-btn__blue--big {
+    display: block;
+    width: max-content;
     padding: .5em 2em;
     box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.4);
 }
@@ -146,31 +158,52 @@ h1 {
     margin: 0 2.2em 3em;
 }
 .grid-content__news,
-.grid-content__exhib {
-    display: grid;
-    /* FROM UNA */
-    grid-template-columns: repeat(auto-fill, minmax(305px, 1fr));
-    gap: 1em;
+.grid-content__exhib,
+.misc-top__items,
+.misc-bottom__items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
-h2 {
-    text-transform: uppercase;
-    font-family: var(--headerFont-hx);
-    font-size: 1.7rem;
-    margin-bottom: .3em;
+.misc-header__divider,
+.misc-bottom__divider {
+    flex: 1 1 305px;
+    margin: .5em;
+    background-color: rgb(240, 240, 245);
+    padding: 2em 1em;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
-.news-cards__img,
-.exhibitions-cards__img,
-.misc-bottom__img {
-    display: block;
-    object-fit: cover;
-    width: 100%;
-    height: 30vh;
+.misc-bottom__divider {
+    justify-content: flex-start;
+}
+.misc-bottom__items {
+    margin-top: 5em;
 }
 .news-cards,
 .exhibitions-cards {
     box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.4);
     transition: transform .3s;
     cursor: pointer;
+    flex: 1 1 305px;
+    margin: .5em;
+}
+h2 {
+    text-transform: uppercase;
+    font-family: var(--headerFont-hx);
+    font-size: 1.7rem;
+    margin: 0 .5rem .3em;
+}
+.news-cards__img,
+.exhibitions-cards__img,
+.misc-bottom__img,
+.kids-img {
+    display: block;
+    object-fit: cover;
+    width: 100%;
+    height: 30vh;
 }
 .news-cards:hover,
 .exhibitions-cards:hover {
@@ -220,15 +253,16 @@ h2 {
     rotate: 180deg;
 }
 .info-header {
-    padding: 4.2vh 0 5.7vh 8vw;
+    padding: 4.2vh 0 5.7vh 2.7rem;
+    margin-left: 0;
 }
 .info-cards {
     position: relative;
     display: flex;
     flex-direction: column;
     height: max-content;
-    min-height: 80vh;
-    padding: 0 2.2em;
+    min-height: 90vh;
+    padding: 0 2.7rem;
     justify-content: center;
     z-index: 1;
     box-shadow: 
@@ -242,7 +276,7 @@ h2 {
     text-transform: uppercase;
     margin-bottom: 4.2vh;
     font-family: var(--headerFont-hx);
-    font-size: 1.3rem;
+    font-size: clamp(1.3rem, calc(1.3em + 1vw), 4rem);
 }
 .info-cards__header::before {
     position: absolute;
@@ -257,7 +291,7 @@ h2 {
     padding-bottom: 2.8vh;
     line-height: 1.3em;
     max-width: 60%;
-    font-size: .85rem;
+    font-size: clamp(var(--font-size), calc(var(--font-size) + 1vw), 3rem);
     color: var(--color-accent-low);
     font-weight: 300;
 }
@@ -310,24 +344,25 @@ h2 {
     font-family: var(--headerFont-hx);
     margin-bottom: .7vh;
 }
-.misc-header__divider {
+.misc-header__divider--deep {
     display: flex;
+    margin-bottom: auto;
 }
-.misc-header__divider > ul + ul,
+.misc-header__divider--deep > ul + ul,
 .misc-price > p + p {
     margin-left: auto;
 }
-.misc-header__divider > ul + ul > li {
+.misc-header__divider--deep > ul + ul > li {
     list-style: none;
     text-align: right;
 }
-.misc-header__divider > ul {
+.misc-header__divider--deep > ul {
     padding-left: 0;
 }
-.misc-header__divider > ul:first-of-type > li {
+.misc-header__divider--deep > ul:first-of-type > li {
     list-style: none;
 }
-.misc-header__divider li {
+.misc-header__divider--deep li {
     text-transform: uppercase;
     line-height: 1.6em;
     font-weight: 300;
@@ -335,11 +370,13 @@ h2 {
 .misc-header__span {
     color: var(--color-accent-high);
 }
-.misc-text, .misc ul {
+.misc-top__items .misc-text, .misc ul {
     padding-bottom: 2.8vh;
+    margin-bottom: auto;
 }
-.misc-top__items > div {
-    margin-top: 5.7vh;
+.misc-bottom__divider > .misc-text {
+    margin: auto 0 0 0;
+    padding: 1em 0 0 0;
 }
 .misc-price {
     display: flex;
@@ -361,10 +398,10 @@ h2 {
 .misc-cta {
     display: inline-block;
     padding: .5em 2em;
+    text-align: center;
     box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.4);
     transition: all .3s;
     border: 2px solid var(--color-main-20);
-    margin-bottom: 5.7vh;
 }
 .misc-cta:hover {
     transform: scale(1.03);
@@ -399,7 +436,7 @@ footer:before {
     z-index: -1;
 }
 footer > * {
-    margin: 0 2.2em;
+    margin: 0 2.7em;
 }
 .links {
     display: grid;
@@ -462,4 +499,42 @@ footer > * {
 }
 .copy-text a:hover {
     color: var(--color-accent-low);
+}
+/* kids page */
+
+.kids-margin {
+    margin: 0 2.2em;
+}
+.kids-margin h1 {
+    max-width: max-content;
+    padding: unset;
+    margin: .5rem;
+}
+.flex-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0 .5em;
+}
+.flex-content > * {
+    margin: 2em 0 0;
+    flex: 1 1 305px;
+}
+.kids-text {
+    display: grid;
+    place-items: center;
+    font-weight: 300;
+    line-height: 1.6em;
+}
+.kids-margin > .cta-btn__blue--big {
+    background-color: var(--color-main-20);
+    color: var(--color-accent-high);
+    text-transform: uppercase;
+    text-overflow: 700;
+    font-size: calc(var(--font-size) + .2rem);
+    margin: 2em 0 3em .5em;
+}
+
+.kids-margin > img {
+    height: 100%;
 }

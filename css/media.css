@@ -1,6 +1,5 @@
-@media (min-width: 750px) {
+@media (min-width: 697px) {
 
-    
     .socials {
         max-width: 43vw;
     }
@@ -9,6 +8,13 @@
         "into inter other"
         ;
     }
-
-
+    .flex-content:nth-child(3) {
+        flex-flow: row-reverse;
+    }
+    .kids-margin div:nth-of-type(2) p {
+        margin: 0 2em 0 0;
+    }
+    .kids-text {
+        margin-left: 2em;
+    }
 }
