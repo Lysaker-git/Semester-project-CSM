@@ -134,7 +134,7 @@ h1 {
 .cta-style__blue {
     background-color: var(--color-main-20);
     color: var(--color-accent-high);
-    text-decoration: none !important;
+    text-decoration: none;
     text-transform: uppercase;
     font-weight: 700;
     font-family: var(--headerFont-hx);
@@ -154,7 +154,8 @@ h1 {
 }
 .news,
 .misc,
-.exhibitions {
+.exhibitions,
+.jobs-margin {
     margin: 0 2.2em 3em;
 }
 .grid-content__news,
@@ -505,7 +506,8 @@ footer > * {
 .kids-margin {
     margin: 0 2.2em;
 }
-.kids-margin h1 {
+.kids-margin h1,
+.jobs-margin h1 {
     max-width: max-content;
     padding: unset;
     margin: .5rem;
@@ -537,4 +539,39 @@ footer > * {
 
 .kids-margin > img {
     height: 100%;
+}
+.jobs-card + .jobs-card {
+    margin-top: 2em;
+}
+.jobs-margin > p {
+    font: 2rem var(--headerFont-hx);
+    text-transform: uppercase;
+    margin-left: .5rem
+}
+.jobs-card {
+    cursor: pointer;
+    background: rgb(242, 242, 242);
+    border-radius: 5px;
+    margin: .5rem;
+    padding: 1rem;
+    width: fit-content;
+    box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.jobs-card h2 {
+    margin-left: 0;
+}
+.jobs-card div {
+    flex: 1 1 305px;
+}
+.right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: right;
+}
+.jobs-card p {
+    text-transform: uppercase;
 }
