@@ -9,178 +9,196 @@
     <link rel="stylesheet" href="css/media.css">
 </head>
 <body>
-    <header>
-        <div class="header-height">
-            <div class="parting-nav">
-                <div class="logo">CSM</div>
-                <label for="checkbx" class="hamburger" alt="Open navigation">
-                    <img src="assets/images/hamburger.svg" alt="Open navigation">
-                </label>
+    <div class="header-background">
+        <header>
+            <div class="logo-nav">
+                <img src="assets/images/logo-wide.svg" alt="Community" class="logo">
+                <nav>
+                    <input type="checkbox" class="nav-menu" id="nav-menu">
+                    <label class="nav-btn" for="nav-menu"><span class="nav-icon"></span></label>
+                    <ul class="totals-menu">
+                        <li class="active-page">
+                            <a href="#" >Home</a>
+                        </li>
+                        <li>
+                            <a href="">Tickets</a>
+                        </li>
+                        <li>
+                            <input type="checkbox" class="nav-menu__sub--company" name="nav-menu__sub--company" id="nav-menu__sub--company">
+                            <label for="nav-menu__sub--company">Company</label>
+                            <ul class="totals-menu__sub--company">
+                                <li><a href="#">Us</a></li>
+                                <li><a href="#">About Us</a></li>
+                                <li><a href="#">Job Openings</a></li>
+                                <li><a href="#">Get involved</a></li>
+                                <li><a href="#">Visiting and Accessibility</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <input type="checkbox" class="nav-menu__sub--exhib" name="nav-menu__sub--exhib" id="nav-menu__sub--exhib">
+                            <label for="nav-menu__sub--exhib">Things to see</label>
+                            <ul class="totals-menu__sub--exhib">
+                                <li><a href="#">Special Exhibitions</a></li>
+                                <li><a href="#">Exhibitions</a></li>
+                                <li><a href="#">For kids</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
             </div>
-            <input type="checkbox" name="hamburger" id="checkbx">
-            <nav>
-                <label for="checkbx" id="close-nav">
-                    <img src="assets/images/Layer 2.svg" alt="close button">
-                </label>
-                <ul>
-                    <li><a href="kids.html" class="nav-item">for kids</a></li>
-                    <li><a href="#" class="nav-item">tickets</a></li>
-                    <li><a href="#" class="nav-item">contact</a></li>
-                    <li><a href="#" class="nav-item">exhibitions</a></li>
-                    <li><a href="#" class="nav-item">news</a></li>
-                    <li><a href="#" class="nav-item">get involved</a></li>
-                </ul>
-            </nav>
-            <h1>LEARN DEVELOP EXPERIENCE</h1>
-            <a href="#" class="cta-btn__blue--big cta-style__blue">book now</a>
-        </div>
-    </header>
+            <div class="hero-container">
+                <h1>LEARN DEVELOP EXPERIENCE</h1>
+                <a href="booking.html" class="cta-btn">book now</a>
+            </div>
+        </header>
     <main>
-        <section class="news">
-            <h2>special events</h2>
-            <div class="grid-content__news">
-                <!-- Using JS onclick event to avoid more markup like nesting a A element around the card -->
-                    <div onclick="location.href='exhibitionsnews.html'" class="news-cards">
-                        <img class="news-cards__img" src="assets/images/linkedin-sales-solutions-QgYvORVDdd8-unsplash.jpg" alt="Prof Shiela Widnall standing at a desk">
-                        <div class="news-cards__bar">
-                            <p class="news-cards__bar--text cta-style__blue">prof shiela w.</p>
+        <div class="margin-main">
+            <section class="news">
+                <h2>special events</h2>
+                <div class="grid-content__news">
+                    <!-- Using JS onclick event to avoid more markup like nesting a A element around the card -->
+                        <div onclick="location.href='exhibitionsnews.html'" class="news-cards">
+                            <img class="news-cards__img" src="assets/images/linkedin-sales-solutions-QgYvORVDdd8-unsplash.jpg" alt="Prof Shiela Widnall standing at a desk">
+                            <div class="news-cards__bar">
+                                <p class="news-cards__bar--text cta-style__blue">prof shiela w.</p>
+                            </div>
+                        </div>
+                        <div onclick="location.href='exhibitionsnews.html'" class="news-cards">
+                            <img class="news-cards__img" src="assets/images/alexandra-k-UPm7_esiLmY-unsplash.jpg" alt="Chandelair in ceiling to light up the night at museum">
+                            <div class="news-cards__bar">
+                                <p class="news-cards__bar--text cta-style__blue">night at museum</p>
+                            </div>
+                        </div>
+                        <div onclick="location.href='exhibitionsnews.html'" class="news-cards">
+                            <img class="news-cards__img" src="assets/images/sungrow-emea-ceTSHQ0qars-unsplash.jpg" alt="Green energy solar planets">
+                            <div class="news-cards__bar">
+                                <p class="news-cards__bar--text cta-style__blue">energetica exhibition</p>
+                            </div>
+                        </div>
+                </div>
+            </section>
+            <section class="exhibitions">
+                <h2 class="exhibitions-header">other exhibitions</h2>
+                <div class="grid-content__exhib">
+                    <div onclick="location.href='exhibitions.html'" class="exhibitions-cards cta-style__neutral">
+                        <img class="exhibitions-cards__img" src="assets/images/celso-405219.jpg" alt="Planets on a row in a dark universe">
+                        <div class="exhibitions-cards__bar">
+                            <p class="exhibitions-cards__bar--text">cosmology</p>
                         </div>
                     </div>
-                    <div onclick="location.href='exhibitionsnews.html'" class="news-cards">
-                        <img class="news-cards__img" src="assets/images/alexandra-k-UPm7_esiLmY-unsplash.jpg" alt="Chandelair in ceiling to light up the night at museum">
-                        <div class="news-cards__bar">
-                            <p class="news-cards__bar--text cta-style__blue">night at museum</p>
+                    <div onclick="location.href='exhibitions.html'" class="exhibitions-cards cta-style__neutral">
+                        <img class="exhibitions-cards__img" src="assets/images/mammoth-1257288_1920.jpg" alt="Skeletal mammoth on a exhibition">
+                        <div class="exhibitions-cards__bar">
+                            <p class="exhibitions-cards__bar--text">evolution</p>
                         </div>
                     </div>
-                    <div onclick="location.href='exhibitionsnews.html'" class="news-cards">
-                        <img class="news-cards__img" src="assets/images/sungrow-emea-ceTSHQ0qars-unsplash.jpg" alt="Green energy solar planets">
-                        <div class="news-cards__bar">
-                            <p class="news-cards__bar--text cta-style__blue">energetica exhibition</p>
+                    <div onclick="location.href='exhibitions.html'" class="exhibitions-cards cta-style__neutral">
+                        <img class="exhibitions-cards__img" src="assets/images/jesse-orrico-60373.jpg" alt="a skinless head-sculpture showing biology">
+                        <div class="exhibitions-cards__bar">
+                            <p class="exhibitions-cards__bar--text">bio and medicine</p>
                         </div>
                     </div>
-            </div>
-        </section>
-        <section class="exhibitions">
-            <h2 class="exhibitions-header">other exhibitions</h2>
-            <div class="grid-content__exhib">
-                <div onclick="location.href='exhibitions.html'" class="exhibitions-cards cta-style__neutral">
-                    <img class="exhibitions-cards__img" src="assets/images/celso-405219.jpg" alt="Planets on a row in a dark universe">
-                    <div class="exhibitions-cards__bar">
-                        <p class="exhibitions-cards__bar--text">cosmology</p>
+                    <div onclick="location.href='exhibitions.html'" class="exhibitions-cards cta-style__neutral">
+                        <img class="exhibitions-cards__img" src="assets/images/william-bout-264826.jpg" alt="interlocking wires in a molecular fashion">
+                        <div class="exhibitions-cards__bar">
+                            <p class="exhibitions-cards__bar--text">robotics and ai</p>
+                        </div>
+                    </div>
+                    <div onclick="location.href='exhibitions.html'" class="exhibitions-cards cta-style__neutral">
+                        <img class="exhibitions-cards__img" src="assets/images/sharon-mccutcheon-2eAkk5lIkC8-unsplash.jpg" alt="interlocking wires in a molecular fashion">
+                        <div class="exhibitions-cards__bar">
+                            <p class="exhibitions-cards__bar--text">ecology</p>
+                        </div>
                     </div>
                 </div>
-                <div onclick="location.href='exhibitions.html'" class="exhibitions-cards cta-style__neutral">
-                    <img class="exhibitions-cards__img" src="assets/images/mammoth-1257288_1920.jpg" alt="Skeletal mammoth on a exhibition">
-                    <div class="exhibitions-cards__bar">
-                        <p class="exhibitions-cards__bar--text">evolution</p>
+            </section>
+            <!-- <section class="info">
+                <h2 class="info-header">explore together</h2>
+                    <div class="info-cards kids">
+                        <h3 class="info-cards__header">for kids</h3>
+                        <p class="info-cards__text">Are you a young person looking to learn more about science? Come on down to our museum, there’s plenty to see and do.</p>
+                        <a href="kids.html" class="info-cards__cta">read more</a>
+                    </div>
+                <div class="info-cards teachers">
+                    <h3 class="info-cards__header">for teachers</h3>
+                    <p class="info-cards__text">As a community-driven museum, we want to work with schools to create places of learning and exploring. </p>
+                    <p class="info-cards__text">Our team are on hand to give your students guided tours of the museum, teach them in our learning laboratory, and provide great video presentations that will excite and inspire them. </p>
+                    <p class="info-cards__text">Please get in touch with us here to find out more about our facilities and to arrange a time to bring your students through for a visit. </p>
+                    <a href="booking.html" class="info-cards__cta">arrange visit</a>
+                </div>
+                <div class="info-cards researcher">
+                    <h3 class="info-cards__header">researches</h3>
+                    <p class="info-cards__text">Are you looking to get involved with our team of researchers and academics?</p>
+                    <p class="info-cards__text">Our museum offers various ways for you to use our resources and contribute towards them. We have online records, laboratory space, and a working relationship with a number of universities around the country.</p>
+                    <a href="contact.html" class="info-cards__cta">contact us</a>
+                </div>
+            </section> -->
+            <section class="misc">
+                <div class="misc-top__items">
+                    <div class="misc-header__divider">
+                        <h3 class="misc-header">opening hours</h3>
+                        <div class="misc-header__divider--deep">
+                            <ul>
+                                <li>monday</li>
+                                <li>tuesday</li>
+                                <li>wednesday</li>
+                                <li>thursday</li>
+                                <li>friday</li>
+                                <li>saturday</li>
+                                <li>sunday</li>
+                            </ul>
+                            <ul>
+                                <li>closed</li>
+                                <li>10:00 - 16:00</li>
+                                <li>10:00 - 16:00</li>
+                                <li>10:00 - 16:00</li>
+                                <li>10:00 - 19:00</li>
+                                <li>09:00 - 16:00</li>
+                                <li>09:00 - 13:00</li>
+                            </ul>
+                        </div>
+                        <h3 class="misc-header">admission is <span class="misc-header__span">free</span></h3>
+                        <p>with a mandatory ticket</p>
+                    </div>
+                    <div class="misc-header__divider">
+                        <h3 class="misc-header">guided tours</h3>
+                        <p class="misc-text">There are guided tours of the museum that leave every hour. These tours include a handy printed guide of the museum. </p>
+                        <p class="misc-text">If you would like to organize a guided tour for your group of 6 or more people, please contact us to arrange the tour.</p>
+                        <div class="misc-price">
+                            <p class="misc-price__text">Price</p>
+                            <p class="misc-price__price">70 nok per person</p>
+                        </div>
+                        <div class="misc-button" onclick="location.href='booking.html'">
+                            <p class="misc-button__text">arrange tour</p>
+                            <p class="misc-button__arrow"></p>
+                        </div>
+                    </div>
+                    <div class="misc-header__divider">
+                        <h3 class="misc-header">get involved</h3>
+                        <p class="misc-text">Do you want to get involved? Read more on how you can Support, Volunteer or apply for a Internship. We would love to hear you out! </p>
+                        <a href="involved.html" class="misc-cta cta-style__blue">get involved</a>
                     </div>
                 </div>
-                <div onclick="location.href='exhibitions.html'" class="exhibitions-cards cta-style__neutral">
-                    <img class="exhibitions-cards__img" src="assets/images/jesse-orrico-60373.jpg" alt="a skinless head-sculpture showing biology">
-                    <div class="exhibitions-cards__bar">
-                        <p class="exhibitions-cards__bar--text">bio and medicine</p>
+                <div class="misc-bottom__items">
+                    <div class="misc-bottom__divider">
+                        <h3 class="misc-header">location</h3>
+                        <iframe src="" frameborder="0" class="misc-map"></iframe>
+                        <p class="misc-text">123. space lane</p>
+                        <p class="misc-text">999 planet earth</p>
+                    </div>
+                    <div class="misc-bottom__divider">
+                        <h3 class="misc-header">food and drink</h3>
+                        <img class="misc-bottom__img" src="assets/images/library-1132573_1920.jpg" alt="library and dining area of the museum">
+                        <p class="misc-text">There is a café attached to the museum where you can get light lunches, soft drinks, coffee, snacks and more.</p>
+                    </div>
+                    <div class="misc-bottom__divider">
+                        <h3 class="misc-header">shop</h3>
+                        <img class="misc-bottom__img" src="assets/images/heart-2607178_1920.jpg" alt="heart on pidestal for shopping">
+                        <p class="misc-text">Our shop offers a range of memorabilia from the museum as well as great gifts and activity packs that allow you to continue to explore science even after you’ve left the museum.</p>
                     </div>
                 </div>
-                <div onclick="location.href='exhibitions.html'" class="exhibitions-cards cta-style__neutral">
-                    <img class="exhibitions-cards__img" src="assets/images/william-bout-264826.jpg" alt="interlocking wires in a molecular fashion">
-                    <div class="exhibitions-cards__bar">
-                        <p class="exhibitions-cards__bar--text">robotics and ai</p>
-                    </div>
-                </div>
-                <div onclick="location.href='exhibitions.html'" class="exhibitions-cards cta-style__neutral">
-                    <img class="exhibitions-cards__img" src="assets/images/sharon-mccutcheon-2eAkk5lIkC8-unsplash.jpg" alt="interlocking wires in a molecular fashion">
-                    <div class="exhibitions-cards__bar">
-                        <p class="exhibitions-cards__bar--text">ecology</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="info">
-            <h2 class="info-header">explore together</h2>
-                <div class="info-cards kids">
-                    <h3 class="info-cards__header">for kids</h3>
-                    <p class="info-cards__text">Are you a young person looking to learn more about science? Come on down to our museum, there’s plenty to see and do.</p>
-                    <a href="kids.html" class="info-cards__cta">read more</a>
-                </div>
-            <div class="info-cards teachers">
-                <h3 class="info-cards__header">for teachers</h3>
-                <p class="info-cards__text">As a community-driven museum, we want to work with schools to create places of learning and exploring. </p>
-                <p class="info-cards__text">Our team are on hand to give your students guided tours of the museum, teach them in our learning laboratory, and provide great video presentations that will excite and inspire them. </p>
-                <p class="info-cards__text">Please get in touch with us here to find out more about our facilities and to arrange a time to bring your students through for a visit. </p>
-                <a href="booking.html" class="info-cards__cta">arrange visit</a>
-            </div>
-            <div class="info-cards researcher">
-                <h3 class="info-cards__header">researches</h3>
-                <p class="info-cards__text">Are you looking to get involved with our team of researchers and academics?</p>
-                <p class="info-cards__text">Our museum offers various ways for you to use our resources and contribute towards them. We have online records, laboratory space, and a working relationship with a number of universities around the country.</p>
-                <a href="contact.html" class="info-cards__cta">contact us</a>
-            </div>
-        </section>
-        <section class="misc">
-            <div class="misc-top__items">
-                <div class="misc-header__divider">
-                    <h3 class="misc-header">opening hours</h3>
-                    <div class="misc-header__divider--deep">
-                        <ul>
-                            <li>monday</li>
-                            <li>tuesday</li>
-                            <li>wednesday</li>
-                            <li>thursday</li>
-                            <li>friday</li>
-                            <li>saturday</li>
-                            <li>sunday</li>
-                        </ul>
-                        <ul>
-                            <li>closed</li>
-                            <li>10:00 - 16:00</li>
-                            <li>10:00 - 16:00</li>
-                            <li>10:00 - 16:00</li>
-                            <li>10:00 - 19:00</li>
-                            <li>09:00 - 16:00</li>
-                            <li>09:00 - 13:00</li>
-                        </ul>
-                    </div>
-                    <h3 class="misc-header">admission is <span class="misc-header__span">free</span></h3>
-                    <p>with a mandatory ticket</p>
-                </div>
-                <div class="misc-header__divider">
-                    <h3 class="misc-header">guided tours</h3>
-                    <p class="misc-text">There are guided tours of the museum that leave every hour. These tours include a handy printed guide of the museum. </p>
-                    <p class="misc-text">If you would like to organize a guided tour for your group of 6 or more people, please contact us to arrange the tour.</p>
-                    <div class="misc-price">
-                        <p class="misc-price__text">Price</p>
-                        <p class="misc-price__price">70 nok per person</p>
-                    </div>
-                    <div class="misc-button" onclick="location.href='booking.html'">
-                        <p class="misc-button__text">arrange tour</p>
-                        <p class="misc-button__arrow"></p>
-                    </div>
-                </div>
-                <div class="misc-header__divider">
-                    <h3 class="misc-header">get involved</h3>
-                    <p class="misc-text">Do you want to get involved? Read more on how you can Support, Volunteer or apply for a Internship. We would love to hear you out! </p>
-                    <a href="involved.html" class="misc-cta cta-style__blue">get involved</a>
-                </div>
-            </div>
-            <div class="misc-bottom__items">
-                <div class="misc-bottom__divider">
-                    <h3 class="misc-header">location</h3>
-                    <iframe src="" frameborder="0" class="misc-map"></iframe>
-                    <p class="misc-text">123. space lane</p>
-                    <p class="misc-text">999 planet earth</p>
-                </div>
-                <div class="misc-bottom__divider">
-                    <h3 class="misc-header">food and drink</h3>
-                    <img class="misc-bottom__img" src="assets/images/library-1132573_1920.jpg" alt="library and dining area of the museum">
-                    <p class="misc-text">There is a café attached to the museum where you can get light lunches, soft drinks, coffee, snacks and more.</p>
-                </div>
-                <div class="misc-bottom__divider">
-                    <h3 class="misc-header">shop</h3>
-                    <img class="misc-bottom__img" src="assets/images/heart-2607178_1920.jpg" alt="heart on pidestal for shopping">
-                    <p class="misc-text">Our shop offers a range of memorabilia from the museum as well as great gifts and activity packs that allow you to continue to explore science even after you’ve left the museum.</p>
-                </div>
-            </div>
-        </section>
+            </section>
+        </div>
     </main>
     <footer>
         <section class="links">

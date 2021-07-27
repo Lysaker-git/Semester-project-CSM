@@ -6,6 +6,10 @@
     font-family: BoisuStroke;
     src: url(../assets/fonts/Boisu-Stroke.otf);
 }
+@font-face {
+    font-family: 'library-font';
+    src: url(../assets/fonts/Library\ 3\ am.otf);
+}
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;700&display=swap');
 
 * {
@@ -13,6 +17,7 @@
     margin: 0;
 }
 :root {
+    --headerLarge: 'library-font', sans-serif;
     --headerFont-h1: BoisuStroke;
     --headerFont-hx: BoisuFull;
     --mainFont: 'Josefin Sans', sans-serif;
@@ -37,99 +42,178 @@ body {
     flex-direction: column;
     font-family: var(--mainFont);
     color: var(--color-main-20);
-    max-width: clamp(375px, 100vw, 1200px);
     overflow-x: hidden;
 }
 .kids-margin {
-    max-width: clamp(375px, 100vw, 1200px);
+    max-width: clamp(375px, 100vw, 1600px);
 }
 /* Mobile setup */
 
 header {
     position: relative;
-    padding: 0 2.7rem;
-    min-height: fit-content;
-    margin-bottom: 2em;
-    background:
-        linear-gradient(var(--color-accent-high), hsla(22, 81%, 59%, 35%)),
-        url(../assets/images/toa-heftiba-412579.jpg),
-        no-repeat;
+    color: white;
+    z-index: 6;
+    font-family: var(--mainFont);
+    height: 100vh;
+    max-width: clamp(375px, 100vw, 1600px);
+    margin: 0 auto 8rem;
+    padding: 2.2rem 2.2rem 0;
+}
+.header-background {
+    position: relative;
+    background: url(../assets/images/stefan-pflaum-zpXK__TvyAw-unsplash\(1\).jpg) no-repeat right top;
     background-size: cover;
+    height: 100vh;
 }
-.header-height {
-    padding: 2em 0;
+.header-background:before {
+    content: '';
+    position: absolute;
+    mix-blend-mode: multiply;
+    inset: 0;
+    background-color: var(--color-accent-high);
+    clip-path: polygon(0 0, 100% 0, 100% 50%, 0 60%);
+    z-index: 5;
 }
-.hamburger {
-    cursor: pointer;
-    transform: scale(0.6);
+.hero-container {
+    margin-top: 12%;
 }
-.parting-nav {
-    display: flex;
-    align-items: center;
-    height: 32px;
+.hero-container h1 {
+    display: table-caption;
+    font-family: var(--headerLarge);
+    font-size: clamp(1rem, 8vw, 5rem);
 }
-.logo {
-    margin-right: auto;
-}
-#checkbx {
-    display: none;
-}
-#checkbx:checked ~ nav {
+.hero-container a {
     display: block;
-    left: 0;
-    right: 0;
-    z-index: 100;
-    transition: all .3s;
-}
-nav {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    left: 100vw;
-    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.4);
-    transition: all .3s;
-    background: var(--color-accent-high);
-}
-nav ul {
-    list-style-type: none;
-    padding: 0;
-}
-nav ul li {
-    margin: 20px auto;
-    padding: .2em .3em 0;
-    width: max-content;
-    display: block;
-    font-size: 2rem;
-    font-weight: 300;
-    text-align: center;
-    transition: transform .3s, background 1s;
-    border-radius: .2em;
-}
-nav ul li:hover {
-    transform: translateY(-3px);
-    background: var(--color-accent-low);
-}
-.nav-item {
-    color: var(--color-main-20);
+    padding: 0.7rem 1.2rem;
+    color: white;
     text-decoration: none;
     text-transform: uppercase;
+    margin-top: 2rem;
+    background-color: var(--color-main-20);
+    width: max-content;
+    border-radius: .2rem;
 }
-#close-nav {
+.logo {
+    width: 200px;
+    margin-right: auto;
+}
+input.mobile {
+    display: none;
+}
+nav{
+    width: 50px;
+    height: max-content;
+}
+.logo-nav {
+    display: flex;
+    width: 100%;
+    position: relative;
+}
+.logo-nav img {
+    margin-right: auto;
+}
+.nav-menu,
+.nav-menu__sub--company,
+.nav-menu__sub--exhib {
+    display: none;
+}
+.nav-btn {
+    display: inline-block;
+    float: right;
+    padding: 1em;
+    background-color: rgba(189, 141, 141, 0.343);
     cursor: pointer;
-    position: absolute;
-    top: 0;
-    right: 0;
-    padding: 1.1rem;
+    position: relative;
+    z-index: 4;
 }
-
-h1 {
-    display: grid;
-    max-width: clamp(50vw, 56vw, 600px);
-    padding: 1.5em 0;
-    place-items: center;
-    font-family: var(--headerFont-h1);
-    font-size: 3rem;
-    text-transform: uppercase;
+.nav-icon {
+    position: relative;
+    display: block;
+    width: 15px;
+    height: 2px;
+    background-color: var(--color-accent-high);
+    transition: background .4s ease-out;
+}
+.nav-icon::before,
+.nav-icon::after {
+    position: absolute;
+    content: '';
+    background-color: var(--color-accent-high);
+    display: block;
+    height: 100%;
+    width: 100%;
+    transition: all .4s ease-out;
+}
+.nav-icon::before {
+    top: 5px;
+}
+.nav-icon::after {
+    top: -5px;
+}
+.nav-menu:checked ~ .nav-btn .nav-icon {
+    background: transparent;
+}
+.nav-menu:checked ~ .nav-btn .nav-icon::after,
+.nav-menu:checked ~ .nav-btn .nav-icon::before {
+    top: 0;
+}
+.nav-menu:checked ~ .nav-btn .nav-icon::after {
+    transform: rotate(-45deg);
+}
+.nav-menu:checked ~ .nav-btn .nav-icon::before {
+    transform: rotate(45deg);
+}
+nav ul {
+    list-style: none;
+}
+nav label {
+    cursor: pointer;
+}
+.totals-menu {
+    position: absolute;
+    top: -2.2em;
+    left: -2.2em;
+    right: 0;
+    max-height: 0;
+    background: rgba(16, 14, 14, 0.9);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(8px);
+    clear: both;
+    overflow: hidden;
+    transition: max-height .4s ease-out ;
+    width: 100vw;
+    z-index: 2;
+}
+.totals-menu > li {
+    padding: 0.5em;
+}
+.totals-menu > li:last-of-type {
+    margin-bottom: 2.2em;
+}
+.totals-menu > li:first-of-type {
+    margin-top: 2.2em;
+}
+.totals-menu a {
+    text-decoration: none;
+    color: white;
+}
+.totals-menu li:hover {
+    background-color: rgba(189, 141, 141, 0.343);
+    width: max-content;
+}
+.nav-menu:checked ~ .totals-menu {
+    max-height: 600px;
+}
+.totals-menu__sub--company,
+.totals-menu__sub--exhib {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height ease-in-out .2s;
+    padding: 0;
+}
+.nav-menu__sub--company:checked ~ .totals-menu__sub--company,
+.nav-menu__sub--exhib:checked ~ .totals-menu__sub--exhib {
+    max-height: 500px;
 }
 .cta-style__blue {
     background-color: var(--color-main-20);
@@ -151,6 +235,10 @@ h1 {
     width: max-content;
     padding: .5em 2em;
     box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.4);
+}
+.margin-main {
+    margin: 0 auto;
+    max-width: clamp(375px, 100vw, 1600px);
 }
 .news,
 .misc,
@@ -601,4 +689,3 @@ footer > * {
 .about-container__text > p + p {
     margin-top: 2em;
 }
-
