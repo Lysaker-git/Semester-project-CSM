@@ -11,6 +11,7 @@
     src: url(../assets/fonts/Library\ 3\ am.otf);
 }
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;700;800;900&display=swap');
 
 * {
     box-sizing: border-box;
@@ -18,12 +19,12 @@
 }
 :root {
     --headerLarge: 'library-font', sans-serif;
-    --headerFont-h1: BoisuStroke;
-    --headerFont-hx: BoisuFull;
+    --headerFont-h2: 900 'Nunito Sans', sans-serif;
+    --headerFont-h3: 700 'Nunito Sans', sans-serif;
     --mainFont: 'Josefin Sans', sans-serif;
     --font-size: 1rem;
     font-size: var(--font-size);
-
+    
     --base-color: 213, 55%;
     --color-main-20: hsla(var(--base-color), 13%, 100%);
     --color-main-20-no-alpha: hsl(var(--base-color), 13%);
@@ -44,7 +45,9 @@ body {
     color: var(--color-main-20);
     overflow-x: hidden;
 }
-.kids-margin {
+.kids-margin,
+header,
+.info {
     max-width: clamp(375px, 100vw, 1600px);
 }
 /* Mobile setup */
@@ -55,7 +58,6 @@ header {
     z-index: 6;
     font-family: var(--mainFont);
     height: 100vh;
-    max-width: clamp(375px, 100vw, 1600px);
     margin: 0 auto 8rem;
     padding: 2.2rem 2.2rem 0;
 }
@@ -75,7 +77,7 @@ header {
     z-index: 5;
 }
 .hero-container {
-    margin-top: 12%;
+    margin-top: clamp(3rem, 10vw, 8%);
 }
 .hero-container h1 {
     display: table-caption;
@@ -175,34 +177,34 @@ nav label {
     left: -2.2em;
     right: 0;
     max-height: 0;
+    padding: 0;
     background: rgba(16, 14, 14, 0.9);
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
     backdrop-filter: blur(8px);
     clear: both;
     overflow: hidden;
-    transition: max-height .4s ease-out ;
+    transition: padding 0s linear, max-height 0s ease-in;
     width: 100vw;
     z-index: 2;
 }
-.totals-menu > li {
-    padding: 0.5em;
-}
-.totals-menu > li:last-of-type {
-    margin-bottom: 2.2em;
-}
-.totals-menu > li:first-of-type {
-    margin-top: 2.2em;
-}
-.totals-menu a {
-    text-decoration: none;
-    color: white;
-}
-.totals-menu li:hover {
-    background-color: rgba(189, 141, 141, 0.343);
-    width: max-content;
-}
 .nav-menu:checked ~ .totals-menu {
     max-height: 600px;
+    padding: 2.2em;
+}
+
+.totals-menu a,
+.totals-menu label {
+    text-decoration: none;
+    color: white;
+    padding: .5em;
+    display: block;
+}
+.totals-menu a:hover,
+.totals-menu label:hover,
+.totals-menu a:focus,
+.totals-menu label:focus {
+    background-color: rgba(189, 141, 141, 0.343);
+    width: max-content;
 }
 .totals-menu__sub--company,
 .totals-menu__sub--exhib {
@@ -221,13 +223,13 @@ nav label {
     text-decoration: none;
     text-transform: uppercase;
     font-weight: 700;
-    font-family: var(--headerFont-hx);
+    font-family: var(--headerFont-h3);
     font-size: 1.4rem
 }
 .cta-style__neutral {
     text-transform: uppercase;
     font-weight: 700;
-    font-family: var(--headerFont-hx);
+    font-family: var(--headerFont-h3);
     font-size: 1.4rem;
 }
 .cta-btn__blue--big {
@@ -245,7 +247,8 @@ nav label {
 .exhibitions,
 .jobs-margin,
 .about-container,
-.exhib-news {
+.exhib-news,
+.info {
     margin: 0 2.2em 3em;
 }
 .grid-content__news,
@@ -283,7 +286,7 @@ nav label {
 }
 h2 {
     text-transform: uppercase;
-    font-family: var(--headerFont-hx);
+    font-family: var(--headerFont-h2);
     font-size: 1.7rem;
     margin: 0 .5rem .3em;
 }
@@ -313,118 +316,6 @@ h2 {
     display: flex;
 }
 
-.info {
-    max-width: 100vw;
-    margin-top: 28vh;
-    position: relative;
-    color: var(--color-accent-high);
-    background: var(--color-main-20);
-}
-.info::before {
-    content: '';
-    background-image: url(../assets/images/small-decor-top.svg);
-    top: -180px;
-    left: -95px;
-    right: -60px;
-    width: 120vw;
-    position: absolute;
-    height: 326px;
-    z-index: -2;
-}
-.info::after {
-    content: '';
-    background-image: url(../assets/images/small-decor__bottom.svg);
-    bottom: -95px;
-    left: -95px;
-    right: -60px;
-    width: 120vw;
-    position: absolute;
-    height: 326px;
-    z-index: -2;
-    rotate: 180deg;
-}
-.info-header {
-    padding: 4.2vh 0 5.7vh 2.7rem;
-    margin-left: 0;
-}
-.info-cards {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    height: max-content;
-    min-height: 90vh;
-    padding: 0 2.7rem;
-    justify-content: center;
-    z-index: 1;
-    box-shadow: 
-        inset 35vw 0 20vw var(--color-main-20),
-        inset 0 10vw 5vw var(--color-main-20),
-        inset 0 -10vw 5vw var(--color-main-20);
-}
-.info-cards__header {
-    position: relative;
-    width: max-content;
-    text-transform: uppercase;
-    margin-bottom: 4.2vh;
-    font-family: var(--headerFont-hx);
-    font-size: clamp(1.3rem, calc(1.3em + 1vw), 4rem);
-}
-.info-cards__header::before {
-    position: absolute;
-    display: block;
-    content:'';
-    height: 2px;
-    width: 100%;
-    background-color: var(--color-accent-high);
-    bottom: 0;
-}
-.info-cards__text {
-    padding-bottom: 2.8vh;
-    line-height: 1.3em;
-    max-width: 60%;
-    font-size: clamp(var(--font-size), calc(var(--font-size) + 1vw), 3rem);
-    color: var(--color-accent-low);
-    font-weight: 300;
-}
-.info-cards__cta {
-    width: max-content;
-    border: 2px solid var(--color-accent-high);
-    padding: 1.4vh 2.2vw .8vh;
-    color: var(--color-main-20);
-    background: var(--color-accent-high);
-    text-transform: uppercase;
-    font-weight: 700;
-    text-decoration: none;
-    transition: all 0.3s;
-}
-.info-cards__cta:hover {
-    border: 2px solid var(--color-accent-high);
-    background: var(--color-main-20);
-    color: var(--color-accent-high);
-}
-.kids {
-    background: 
-        linear-gradient(.25deg, hsla(213,55%, 13%, 100%), hsla(213, 55%, 13%, 40%)),
-        url(../assets/images/pexels-monstera-5063444.jpg),
-        no-repeat;
-    background-size: cover;
-}
-.teachers {
-    background: 
-    linear-gradient(.25deg, hsla(213,55%, 13%, 100%), hsla(213, 55%, 13%, 40%)),
-    url(../assets/images/luke-ellis-craven-400722.jpg),
-    no-repeat;
-    background-size: cover;
-    background-position-x: 50px;
-}
-.researcher {
-    background: 
-    linear-gradient(.25deg, hsla(213,55%, 13%, 100%), hsla(213, 55%, 13%, 40%)),
-    url(../assets/images/billetto-editorial-334686.jpg),
-    no-repeat;
-    background-size: cover;
-    background-position-x: -200px;
-}
 
 .misc {
     margin-top: 28vh;
@@ -432,7 +323,7 @@ h2 {
 }
 .misc-header {
     text-transform: uppercase;
-    font-family: var(--headerFont-hx);
+    font-family: var(--headerFont-h3);
     margin-bottom: .7vh;
 }
 .misc-header__divider--deep {
@@ -636,7 +527,7 @@ footer > * {
     margin-top: 2em;
 }
 .jobs-margin > p {
-    font: 2rem var(--headerFont-hx);
+    font: 2rem var(--headerFont-h3);
     text-transform: uppercase;
     margin-left: .5rem
 }
