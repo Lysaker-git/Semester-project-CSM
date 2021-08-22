@@ -44,10 +44,13 @@ body {
     font-family: var(--mainFont);
     color: var(--color-main-20);
     overflow-x: hidden;
+    background-image: linear-gradient(180deg, #F5F5F5, white 80%);
 }
 .kids-margin,
 header,
-.info {
+.info,
+.booking-container,
+.footer-container {
     max-width: clamp(375px, 100vw, 1600px);
 }
 /* Mobile setup */
@@ -57,15 +60,20 @@ header {
     color: white;
     z-index: 6;
     font-family: var(--mainFont);
-    height: 100vh;
     margin: 0 auto 8rem;
     padding: 2.2rem 2.2rem 0;
 }
-.header-background {
+.header-background,
+.header-background__small {
     position: relative;
     background: url(../assets/images/stefan-pflaum-zpXK__TvyAw-unsplash\(1\).jpg) no-repeat right top;
     background-size: cover;
-    height: 100vh;
+
+}
+
+.header-background,
+header {
+    height: clamp(100vh, 50em, 150vh);
 }
 .header-background:before {
     content: '';
@@ -73,11 +81,14 @@ header {
     mix-blend-mode: multiply;
     inset: 0;
     background-color: var(--color-accent-high);
-    clip-path: polygon(0 0, 100% 0, 100% 50%, 0 60%);
+    clip-path: polygon(0 0, 100% 0, 100% 50%, 0 75%);
     z-index: 5;
 }
 .hero-container {
     margin-top: clamp(3rem, 10vw, 8%);
+}
+h1 {
+    text-transform: uppercase;
 }
 .hero-container h1 {
     display: table-caption;
@@ -121,7 +132,7 @@ nav{
 }
 .nav-btn {
     display: inline-block;
-    float: right;
+    /* float: right; */
     padding: 1em;
     background-color: rgba(189, 141, 141, 0.343);
     cursor: pointer;
@@ -198,13 +209,16 @@ nav label {
     color: white;
     padding: .5em;
     display: block;
+    width: max-content;
+    border-radius: 5px;
 }
 .totals-menu a:hover,
 .totals-menu label:hover,
 .totals-menu a:focus,
-.totals-menu label:focus {
+.totals-menu label:focus,
+.active-page {
     background-color: rgba(189, 141, 141, 0.343);
-    width: max-content;
+    border-radius: 5px;
 }
 .totals-menu__sub--company,
 .totals-menu__sub--exhib {
@@ -214,7 +228,13 @@ nav label {
     padding: 0;
 }
 .nav-menu__sub--company:checked ~ .totals-menu__sub--company,
-.nav-menu__sub--exhib:checked ~ .totals-menu__sub--exhib {
+.nav-menu__sub--company:hover ~ .totals-menu__sub--company,
+.nav-menu__sub--company:focus ~ .totals-menu__sub--company,
+.totals-menu__sub--company:hover,
+.totals-menu__sub--company > li > a:focus,
+.nav-menu__sub--exhib:checked ~ .totals-menu__sub--exhib,
+.nav-menu__sub--exhib:hover ~ .totals-menu__sub--exhib,
+.totals-menu__sub--exhib:hover {
     max-height: 500px;
 }
 .cta-style__blue {
@@ -251,6 +271,7 @@ nav label {
 .info {
     margin: 0 2.2em 3em;
 }
+
 .grid-content__news,
 .grid-content__exhib,
 .misc-top__items,
@@ -281,7 +302,7 @@ nav label {
     box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.4);
     transition: transform .3s;
     cursor: pointer;
-    flex: 1 1 305px;
+    flex: 1 1 280px;
     margin: .5em;
 }
 h2 {
@@ -290,6 +311,9 @@ h2 {
     font-size: 1.7rem;
     margin: 0 .5rem .3em;
 }
+.news>h2 {
+    margin-top: 3em;
+}
 .news-cards__img,
 .exhibitions-cards__img,
 .misc-bottom__img,
@@ -297,7 +321,7 @@ h2 {
     display: block;
     object-fit: cover;
     width: 100%;
-    height: 30vh;
+    height: 22rem;
 }
 .news-cards:hover,
 .exhibitions-cards:hover {
@@ -314,8 +338,95 @@ h2 {
 }
 .exhibitions-cards__bar {
     display: flex;
+    background-color: white;
+}
+.info-cards {
+    position: relative;
+    padding: 6rem 2rem;
+    display: grid;
+    place-items: start;
+    height: 100%;
+}
+.kids {
+    z-index: 6;
+    width: clamp(60%, 40vw, 80%);
+    color: white;
+}
+.info {
+    padding: 7rem 0 12rem;
+    position: relative;
+    z-index: 2;
+    filter: drop-shadow(3px 4px 5px rgba(0, 0, 0, 0.4)) drop-shadow(-3px -4px 5px rgba(0, 0, 0, 0.4));
+}
+.info::before {
+    content: '';
+    position: absolute;
+    width: 150vw;
+    background-color: rgb(255, 255, 255);
+    height: 100%;
+    inset: 0;
+    left: -300px;
+    clip-path: 
+        polygon(0% 0%, 0% 93%, 9% 90%, 20% 93%, 40% 95%, 50% 89%, 77% 96%, 100% 92%, 100% 5%, 91% 10%, 74% 3%, 57% 4%, 35% 0%, 14% 5%);
+    z-index: 0;
 }
 
+.info-cards__background {
+    position: relative;
+    background-image: url(../assets/images/pexels-monstera-5063444.jpg);
+    background-size: cover;
+    background-position: center center;
+    height: 500px;
+    margin: 4rem .5rem;
+    box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.4);
+}
+.info-cards__background::before {
+    content: '';
+    position: absolute;
+    mix-blend-mode: multiply;
+    inset: 0;
+    background-color: var(--color-accent-high);
+    clip-path: polygon(0 0, 85% 0, 55% 100%, 0 100%);
+    z-index: 5;
+}
+.info-header {
+    position: relative;
+    margin-top: 8rem;
+    z-index: 3;
+}
+.info-cards__header {
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    white-space: nowrap;
+    /* CREDIT KEVIN POWELL #SHORTS */
+    background-image:
+     linear-gradient(white, white);
+    background-size: 100% 3px;
+    background-repeat: no-repeat;
+    background-position: left bottom;
+}
+.info-cards__text {
+    max-width: 30rem;
+    margin: 1rem 0;
+    font-size: clamp(.8rem, 4vw, 1.2rem);
+    line-height: 1.5rem;
+    letter-spacing: .1rem;
+}
+.info-cards__cta {
+    white-space: nowrap;
+    text-decoration: none;
+    background: var(--color-accent-high);
+    padding: .7rem 1.5rem;
+    text-transform: uppercase;
+    color: var(--color-main-20);
+    font-weight: 700;
+    box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.4);
+    transform: scale(1);
+    transition: transform .2s ease-in-out;
+}
+.info-cards__cta:hover {
+    transform: scale(1.05);
+}
 
 .misc {
     margin-top: 28vh;
@@ -364,6 +475,7 @@ h2 {
     display: flex;
 }
 .misc-button {
+    font-size: 1.4rem;
     cursor: pointer;
     text-transform: uppercase;
     padding: .6em 2em .4em;
@@ -394,95 +506,81 @@ h2 {
 
 footer {
     position: relative;
-    display: grid;
-    grid-template-areas: 
-    "socials"
-    "links"
-    "copy"
-    ;
-    gap: 7.1vh 0;
-    margin-top: 21.4vh;
-    padding-bottom: 7.1vh;
+    z-index: 1;
+    margin-top: 10rem;
     background: var(--color-main-20);
-    color: var(--color-accent-low);
-    font-weight: 300;
+    display: flex;
 }
-footer:before {
+footer a,
+footer {
+    color: var(--color-accent-high);
+}
+footer::before {
     content: '';
     position: absolute;
     background-image: url(../assets/images/footer-decor.svg);
-    top: -171px;
-    left: -140px;
-    width: 120vw;
-    height: 400px;
+    background-position: center center;
+    top: -11.3rem;
+    left: -10rem;
+    width: 150vw;
+    height: 20rem;
     z-index: -1;
 }
-footer > * {
-    margin: 0 2.7em;
+.footer-container {
+    margin: 0 auto;
+    flex-grow: 1;
+    padding: 2.2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.footer-container > * {
+    flex: 1 1 305px;
+    margin: .5rem;
 }
 .links {
-    display: grid;
-    grid-template-areas: 
-    "info inter"
-    "other other"
-    ;
-    grid-area: links;
-    gap: 2.2vh 0;
+    display: flex;
+    flex-wrap: wrap;
 }
-.links-header__info {
-    grid-area: info;
+.links > div {
+    flex: 1 1 170px;
 }
-.links-header__inter {
-    grid-area: inter;
+.links h3 {
+    text-transform: uppercase;
 }
-.links-header__other {
-    grid-area: other;
-}
-.links-header {
-    text-transform: capitalize;
-    color: var(--color-accent-high);
-    margin-bottom: 10px;
-}
-.links-divider ul {
-    padding: 0;
-}
-.links-items {
+.links ul {
+    padding: 1rem 0;
     list-style: none;
-    padding: 5px 0;
 }
-.links-items a {
+.links a {
     color: var(--color-accent-low);
     text-decoration: none;
     text-transform: capitalize;
+    transition: all .1s ease-in;
 }
-.links-items a:hover {
+.links a:hover {
     color: var(--color-accent-high);
+    font-size: 1.1rem;
+}
+.links li:not(:first-of-type) {
+    margin-top: .3rem;
 }
 .socials {
-    max-width: 60vw;
-    grid-area: socials;
-    margin-top: 7.1vh;
+    margin-bottom: 5rem;
 }
-.socials-icons {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 1.4vh;
+.socials p {
+    max-width: 20rem;
+    padding-bottom: 2rem;
 }
-.copy {
-    grid-area: copy;
+.socials-icons__box:not(:first-of-type) {
+    margin-left: 2rem;
 }
-.copy > * + * {
-    padding-top: 2.8vh;
+.copy p {
+    max-width: 20rem;
 }
-
-.copy-text a {
-    color: var(--color-accent-high);
-    font-size: 1.3rem;
+.copy p:not(:first-of-type) {
+    margin-top: 1rem;
 }
-.copy-text a:hover {
-    color: var(--color-accent-low);
-}
-/* kids page */
 
 .kids-margin {
     margin: 0 2.2em;
@@ -579,4 +677,50 @@ footer > * {
 }
 .about-container__text > p + p {
     margin-top: 2em;
+}
+
+/* BOOKING PAGE */
+
+.booking-container {
+    margin: 0 auto;
+    padding: 2.2rem;
+}
+.booking-selection {
+    width: clamp(375px, 100vw, 1600px);
+}
+.booking-selection>input {
+    display: none;
+}
+.booking-selection label {
+    cursor: pointer;
+}
+.booking-selection > div {
+    background-image: url(../assets/images/khamkeo-vilaysing-a-KI-IGu01k-unsplash\ copy.jpg);
+    background-position: top left;
+    background-size: cover;
+    height: 600px;
+}
+/* selecting variant */
+
+#booking-tour,
+#booking-school,
+#booking-done,
+#booking-tickets {
+    display: none;
+}
+.booking-selection__btn[value="ticket"]:checked ~ #booking-tickets,
+.booking-selection__btn[value="tour"]:checked ~ #booking-tour,
+.booking-selection__btn[value="school"]:checked ~ #booking-school,
+.booking-selection__btn[value="done"]:checked ~ #booking-done
+{
+    display: flex;
+}
+#booking-tickets > div {
+    background-color: var(--color-accent-high);
+    /* mix-blend-mode: multiply; */
+    width: 30%;
+    height: 600px;
+}
+#booking-tickets > div > p {
+    color: white;
 }
