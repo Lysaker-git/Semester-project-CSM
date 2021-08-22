@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSM | MAIN</title>
+    <meta name="description" content="Community Science Museum main page - where you can book your trip to the worlds most exciting place to be!">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/media.css">
 </head>
@@ -17,8 +18,8 @@
                     <input type="checkbox" class="nav-menu" id="nav-menu">
                     <label class="nav-btn" for="nav-menu"><span class="nav-icon"></span></label>
                     <ul class="totals-menu">
-                        <li class="active-page">
-                            <a href="#" >Home</a>
+                        <li>
+                            <a href="#" class="active-page">Home</a>
                         </li>
                         <li>
                             <a href="">Tickets</a>
@@ -31,7 +32,7 @@
                                 <li><a href="#">About Us</a></li>
                                 <li><a href="#">Job Openings</a></li>
                                 <li><a href="#">Get involved</a></li>
-                                <li><a href="#">Visiting and Accessibility</a></li>
+                                <li><a href="#">Visiting and </br>Accessibility</a></li>
                             </ul>
                         </li>
                         <li>
@@ -51,6 +52,7 @@
                 <a href="booking.html" class="cta-btn">book now</a>
             </div>
         </header>
+    </div>
     <main>
         <div class="margin-main">
             <section class="news">
@@ -114,10 +116,12 @@
             </section>
             <section class="info">
                 <h2 class="info-header">explore together</h2>
-                    <div class="info-cards kids">
-                        <h3 class="info-cards__header">for kids</h3>
-                        <p class="info-cards__text">Are you a young person looking to learn more about science? Come on down to our museum, there’s plenty to see and do.</p>
-                        <a href="kids.html" class="info-cards__cta">read more</a>
+                    <div class="info-cards__background">
+                        <div class="info-cards kids">
+                            <h3 class="info-cards__header">for kids</h3>
+                            <p class="info-cards__text">Are you a young person looking to learn more about science? Come on down to our museum, there’s plenty to see and do.</p>
+                            <a href="kids.html" class="info-cards__cta">read more</a>
+                        </div>
                     </div>
                 <div class="info-cards teachers">
                     <h3 class="info-cards__header">for teachers</h3>
@@ -127,10 +131,13 @@
                     <a href="booking.html" class="info-cards__cta">arrange visit</a>
                 </div>
                 <div class="info-cards researcher">
-                    <h3 class="info-cards__header">researches</h3>
-                    <p class="info-cards__text">Are you looking to get involved with our team of researchers and academics?</p>
-                    <p class="info-cards__text">Our museum offers various ways for you to use our resources and contribute towards them. We have online records, laboratory space, and a working relationship with a number of universities around the country.</p>
-                    <a href="contact.html" class="info-cards__cta">contact us</a>
+                    <div>
+                        <div>
+                            <h3 class="info-cards__header">researches</h3>
+                            <p class="info-cards__text">Are you looking to get involved with our team of researchers and academics?</p>
+                            <a href="contact.html" class="info-cards__cta">contact us</a>
+                        </div>
+                    </div>
                 </div>
             </section>
             <section class="misc">
@@ -182,7 +189,7 @@
                 <div class="misc-bottom__items">
                     <div class="misc-bottom__divider">
                         <h3 class="misc-header">location</h3>
-                        <iframe src="" frameborder="0" class="misc-map"></iframe>
+                        <!-- <iframe src="" frameborder="0" class="misc-map"></iframe> -->
                         <p class="misc-text">123. space lane</p>
                         <p class="misc-text">999 planet earth</p>
                     </div>
@@ -201,48 +208,50 @@
         </div>
     </main>
     <footer>
-        <section class="links">
-            <div class="links-divider">
-                <h3 class="links-header links-header__info">information</h3>
-                <ul>
-                    <li class="links-items"><a href="#">home</a></li>
-                    <li class="links-items"><a href="#">for kids</a></li>
-                    <li class="links-items"><a href="#">exhibitions spaces</a></li>
-                    <li class="links-items"><a href="#">special events</a></li>
-                </ul>
+        <div class="footer-container">
+            <section class="links">
+                <div>
+                    <h3 class="links-header links-header__info">information</h3>
+                    <ul>
+                        <li class="links-items"><a href="#">home</a></li>
+                        <li class="links-items"><a href="#">for kids</a></li>
+                        <li class="links-items"><a href="#">exhibitions spaces</a></li>
+                        <li class="links-items"><a href="#">special events</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="links-header links-header__inter">interaction</h3>
+                    <ul>
+                        <li class="links-items"><a href="#">book tickets</a></li>
+                        <li class="links-items"><a href="#">contact us</a></li>
+                        <li class="links-items"><a href="#">get involved</a></li>
+                        <li class="links-items"><a href=""></a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="links-header links-header__other">other topics</h3>
+                    <ul>
+                        <li class="links-items"><a href="#">accessibillity</a></li>
+                        <li class="links-items"><a href="#">privacy policy</a></li>
+                        <li class="links-items"><a href="#">join our team</a></li>
+                        <li class="links-items"><a href="#">terms and conditions</a></li>
+                    </ul>
+                </div>
+            </section>
+            <div class="socials">
+                <p class="socials-text">Check us out on Facebook, Twitter or Instagram for our latest updates and surprises! </p>
+                <div class="socials-icons">
+                    <a href="www.twitter.com" class="socials-icons__box"><img src="assets/images/twitter.svg" alt="twitter"></a>
+                    <a href="www.facebook.com" class="socials-icons__box"><img src="assets/images/facebook.svg" alt="facebook"></a>
+                    <a href="www.instagram.com" class="socials-icons__box"><img src="assets/images/insta.svg" alt="instagram"></a>
+                </div>
             </div>
-            <div class="links-divider">
-                <h3 class="links-header links-header__inter">interaction</h3>
-                <ul>
-                    <li class="links-items"><a href="#">book tickets</a></li>
-                    <li class="links-items"><a href="#">contact us</a></li>
-                    <li class="links-items"><a href="#">get involved</a></li>
-                    <li class="links-items"><a href=""></a></li>
-                </ul>
+            <div class="copy">
+                <p class="copy-text">© CSM - Community Science Museum. 2021</p>
+                <p class="copy-text">© Robin Lysaker - Noroff School project 2021</p>
+                <p class="copy-text">Disclaimer: This is not a actual Museum, This page is a part of my semester project for Noroff Academy.</p>
+                <p class="copy-text">Click to see my <a href="contributors.html">contributors</a></p>
             </div>
-            <div class="links-divider">
-                <h3 class="links-header links-header__other">other topics</h3>
-                <ul>
-                    <li class="links-items"><a href="#">accessibillity</a></li>
-                    <li class="links-items"><a href="#">privacy policy</a></li>
-                    <li class="links-items"><a href="#">join our team</a></li>
-                    <li class="links-items"><a href="#">terms and conditions</a></li>
-                </ul>
-            </div>
-        </section>
-        <div class="socials">
-            <p class="socials-text">Check us out on Facebook, Twitter or Instagram for our latest updates and surprises! </p>
-            <div class="socials-icons">
-                <a href="www.twitter.com" class="socials-icons__box"><img src="assets/images/twitter.svg" alt="twitter icon"></a>
-                <a href="www.facebook.com" class="socials-icons__box"><img src="assets/images/facebook.svg" alt="facebook"></a>
-                <a href="www.instagram.com" class="socials-icons__box"><img src="assets/images/insta.svg" alt="instagram"></a>
-            </div>
-        </div>
-        <div class="copy">
-            <p class="copy-text">© CSM - Community Science Museum. 2021</p>
-            <p class="copy-text">© Robin Lysaker - Noroff School project 2021</p>
-            <p class="copy-text">Disclaimer: This is not a actual Museum, This page is a part of my semester project for Noroff Academy.</p>
-            <p class="copy-text">Click to see my <a href="contributors.html">contributors</a></p>
         </div>
     </footer>
 </body>
