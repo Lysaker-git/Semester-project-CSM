@@ -527,7 +527,9 @@ h2 {
 }
 .misc-bottom__divider:first-of-type>img {
     cursor: pointer;
-    max-height: 400px;
+    width: 100%;
+    height: auto;
+    max-width: 460px;
 }
 .misc-button {
     font-size: 1.4rem;
