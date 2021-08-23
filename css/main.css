@@ -17,6 +17,9 @@
     box-sizing: border-box;
     margin: 0;
 }
+*:focus {
+    outline: none;
+}
 :root {
     --headerLarge: 'library-font', sans-serif;
     --headerFont-h2: 900 'Nunito Sans', sans-serif;
@@ -50,7 +53,8 @@ body {
 header,
 .info,
 .booking-container,
-.footer-container {
+.footer-container,
+.jobs-margin {
     max-width: clamp(375px, 100vw, 1600px);
 }
 /* Mobile setup */
@@ -123,7 +127,20 @@ nav{
     position: relative;
 }
 .logo-nav img {
+    cursor: pointer;
     margin-right: auto;
+}
+.logo-nav img:hover {
+    animation: bouncy-logo .3s;
+    animation-iteration-count: 2;
+}
+@keyframes bouncy-logo {
+    0%, 100% {
+        transform: translateY(0)
+    }
+    50% {
+        transform: translateY(-2px);
+    }
 }
 .nav-menu,
 .nav-menu__sub--company,
@@ -594,11 +611,15 @@ footer::before {
     color: var(--color-accent-low);
     text-decoration: none;
     text-transform: capitalize;
+    background-image: linear-gradient(var(--color-accent-high), var(--color-accent-high));
+    background-size: 0% 2px;
+    background-position: bottom left;
+    background-repeat: no-repeat;
     transition: all .1s ease-in;
 }
-.links a:hover {
-    color: var(--color-accent-high);
-    font-size: 1.1rem;
+.links a:hover,
+.links a:focus {
+    background-size: 100% 2px;
 }
 .links li:not(:first-of-type) {
     margin-top: .3rem;
@@ -613,8 +634,23 @@ footer::before {
 .socials-icons__box:not(:first-of-type) {
     margin-left: 2rem;
 }
+.socials-icons {
+    display: flex;
+}
+.socials-icons a {
+    display: block;
+    width: max-content;
+}
+.socials-icons a:focus {
+    background-color: var(--color-main-50);
+    border-radius: 5px;
+}
 .copy p {
     max-width: 20rem;
+}
+.copy p a:hover,
+.copy p a:focus {
+    color: var(--color-accent-low);
 }
 .copy p:not(:first-of-type) {
     margin-top: 1rem;
@@ -659,13 +695,22 @@ footer::before {
 .kids-margin > img {
     height: 100%;
 }
-.jobs-card + .jobs-card {
-    margin-top: 2em;
+.jobs-margin {
+    margin: 0 auto;
+    padding: .5em;
+}
+.jobs-card {
+    margin: 2em;
 }
 .jobs-margin > p {
     font: 2rem var(--headerFont-h3);
     text-transform: uppercase;
     margin-left: .5rem
+}
+.jobs-flex__container {
+    max-width: clamp(600px, 100vw, 1600px);
+    display: flex;
+    flex-wrap: wrap;
 }
 .jobs-card {
     cursor: pointer;
@@ -675,12 +720,14 @@ footer::before {
     padding: 1rem;
     width: fit-content;
     box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.4);
+    flex: 1 1 500px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     transition: transform .3s, background .4s, color .5s;   
 }
-.jobs-card:hover {
+.jobs-card:hover,
+.jobs-card:focus {
     transform: scale(1.01);
     background: var(--color-main-20);
     color: var(--color-accent-high);

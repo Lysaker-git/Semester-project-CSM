@@ -49,7 +49,7 @@
         height: auto;
     }
     .header-background__small {
-        height: 12vh;
+        height: 7em;
     }
     .header-background__small:before {
         content: '';
