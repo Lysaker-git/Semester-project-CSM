@@ -508,6 +508,10 @@ h2 {
 .misc-price {
     display: flex;
 }
+.misc-bottom__divider:first-of-type>img {
+    cursor: pointer;
+    max-height: 400px;
+}
 .misc-button {
     font-size: 1.4rem;
     cursor: pointer;
