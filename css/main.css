@@ -130,7 +130,8 @@ nav{
     cursor: pointer;
     margin-right: auto;
 }
-.logo-nav img:hover {
+.logo-nav img:hover, 
+.logo-nav img:focus {
     animation: bouncy-logo .3s;
     animation-iteration-count: 2;
 }
@@ -357,7 +358,9 @@ h2 {
     height: 22rem;
 }
 .news-cards:hover,
-.exhibitions-cards:hover {
+.exhibitions-cards:hover,
+.news-cards:focus,
+.exhibitions-cards:focus {
     transform: scale(1.02);
 }
 .news-cards__bar {
@@ -473,7 +476,8 @@ h2 {
     transform: scale(1);
     transition: transform .2s ease-in-out;
 }
-.info-cards__cta:hover {
+.info-cards__cta:hover,
+.info-cards__cta:focus {
     transform: scale(1.05);
 }
 .teacher-image {
@@ -542,7 +546,8 @@ h2 {
     transition: all .3s;
     text-align: center;
 }
-.misc-button:hover {
+.misc-button:hover,
+.misc-button:focus {
     background: var(--color-main-20);
     color: var(--color-accent-high);
 }
@@ -554,7 +559,8 @@ h2 {
     transition: all .3s;
     border: 2px solid var(--color-main-20);
 }
-.misc-cta:hover {
+.misc-cta:hover,
+.misc-cta:focus {
     transform: scale(1.03);
 }
 .misc-bottom__img {

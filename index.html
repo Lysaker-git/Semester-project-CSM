@@ -13,7 +13,7 @@
     <div class="header-background">
         <header>
             <div class="logo-nav">
-                <img onclick="location.href='index.html'" src="assets/images/logo-wide.svg" alt="Community" class="logo">
+                <img tabindex="0" onclick="location.href='index.html'" src="assets/images/logo-wide.svg" alt="Community logo - home link" class="logo">
                 <nav>
                     <input type="checkbox" class="nav-menu" id="nav-menu">
                     <label class="nav-btn" for="nav-menu"><span class="nav-icon"></span></label>
@@ -26,7 +26,7 @@
                         </li>
                         <li>
                             <input type="checkbox" class="nav-menu__sub--company" name="nav-menu__sub--company" id="nav-menu__sub--company">
-                            <label for="nav-menu__sub--company">Company &#9660;</label>
+                            <label for="nav-menu__sub--company" tabindex="0">Company &#9660;</label>
                             <ul class="totals-menu__sub--company">
                                 <li><a href="about.html">About Us</a></li>
                                 <li><a href="jobs.html">Job Openings</a></li>
@@ -37,7 +37,7 @@
                         </li>
                         <li>
                             <input type="checkbox" class="nav-menu__sub--exhib" name="nav-menu__sub--exhib" id="nav-menu__sub--exhib">
-                            <label for="nav-menu__sub--exhib">Things to see &#9660;</label>
+                            <label for="nav-menu__sub--exhib" tabindex="0">Things to see &#9660;</label>
                             <ul class="totals-menu__sub--exhib">
                                 <li><a href="exhibitionsnews.html">Special Exhibitions</a></li>
                                 <li><a href="exhibitions.html">Exhibitions</a></li>
@@ -59,19 +59,19 @@
                 <h2>special events</h2>
                 <div class="grid-content__news">
                     <!-- Using JS onclick event to avoid more markup like nesting a A element around the card -->
-                        <div onclick="location.href='exhibitionsnews.html'" class="news-cards">
+                        <div onclick="location.href='exhibitionsnews.html'" class="news-cards" tabindex="0">
                             <img class="news-cards__img" src="assets/images/linkedin-sales-solutions-QgYvORVDdd8-unsplash.jpg" alt="Prof Shiela Widnall standing at a desk">
                             <div class="news-cards__bar">
                                 <p class="news-cards__bar--text cta-style__blue">prof shiela w.</p>
                             </div>
                         </div>
-                        <div onclick="location.href='exhibitionsnews.html'" class="news-cards">
+                        <div onclick="location.href='exhibitionsnews.html'" class="news-cards" tabindex="0">
                             <img class="news-cards__img" src="assets/images/alexandra-k-UPm7_esiLmY-unsplash.jpg" alt="Chandelair in ceiling to light up the night at museum">
                             <div class="news-cards__bar">
                                 <p class="news-cards__bar--text cta-style__blue">night at museum</p>
                             </div>
                         </div>
-                        <div onclick="location.href='exhibitionsnews.html'" class="news-cards">
+                        <div onclick="location.href='exhibitionsnews.html'" class="news-cards" tabindex="0">
                             <img class="news-cards__img" src="assets/images/sungrow-emea-ceTSHQ0qars-unsplash.jpg" alt="Green energy solar planets">
                             <div class="news-cards__bar">
                                 <p class="news-cards__bar--text cta-style__blue">energetica exhibition</p>
@@ -82,31 +82,31 @@
             <section class="exhibitions">
                 <h2 class="exhibitions-header">other exhibitions</h2>
                 <div class="grid-content__exhib">
-                    <div onclick="location.href='exhibitions.html'" class="exhibitions-cards cta-style__neutral">
+                    <div onclick="location.href='exhibitions.html'" class="exhibitions-cards cta-style__neutral" tabindex="0">
                         <img class="exhibitions-cards__img" src="assets/images/celso-405219.jpg" alt="Planets on a row in a dark universe">
                         <div class="exhibitions-cards__bar">
                             <p class="exhibitions-cards__bar--text">cosmology</p>
                         </div>
                     </div>
-                    <div onclick="location.href='exhibitions.html'" class="exhibitions-cards cta-style__neutral">
+                    <div onclick="location.href='exhibitions.html'" class="exhibitions-cards cta-style__neutral" tabindex="0">
                         <img class="exhibitions-cards__img" src="assets/images/mammoth-1257288_1920.jpg" alt="Skeletal mammoth on a exhibition">
                         <div class="exhibitions-cards__bar">
                             <p class="exhibitions-cards__bar--text">evolution</p>
                         </div>
                     </div>
-                    <div onclick="location.href='exhibitions.html'" class="exhibitions-cards cta-style__neutral">
+                    <div onclick="location.href='exhibitions.html'" class="exhibitions-cards cta-style__neutral" tabindex="0">
                         <img class="exhibitions-cards__img" src="assets/images/jesse-orrico-60373.jpg" alt="a skinless head-sculpture showing biology">
                         <div class="exhibitions-cards__bar">
                             <p class="exhibitions-cards__bar--text">bio and medicine</p>
                         </div>
                     </div>
-                    <div onclick="location.href='exhibitions.html'" class="exhibitions-cards cta-style__neutral">
+                    <div onclick="location.href='exhibitions.html'" class="exhibitions-cards cta-style__neutral" tabindex="0">
                         <img class="exhibitions-cards__img" src="assets/images/william-bout-264826.jpg" alt="interlocking wires in a molecular fashion">
                         <div class="exhibitions-cards__bar">
                             <p class="exhibitions-cards__bar--text">robotics and ai</p>
                         </div>
                     </div>
-                    <div onclick="location.href='exhibitions.html'" class="exhibitions-cards cta-style__neutral">
+                    <div onclick="location.href='exhibitions.html'" class="exhibitions-cards cta-style__neutral" tabindex="0">
                         <img class="exhibitions-cards__img" src="assets/images/sharon-mccutcheon-2eAkk5lIkC8-unsplash.jpg" alt="interlocking wires in a molecular fashion">
                         <div class="exhibitions-cards__bar">
                             <p class="exhibitions-cards__bar--text">ecology</p>
@@ -176,7 +176,7 @@
                             <p class="misc-price__text">Price</p>
                             <p class="misc-price__price">70 nok per person</p>
                         </div>
-                        <div class="misc-button" onclick="location.href='booking.html'">
+                        <div class="misc-button" onclick="location.href='booking.html'" tabindex="0">
                             <p class="misc-button__text">arrange tour</p>
                             <p class="misc-button__arrow"></p>
                         </div>
