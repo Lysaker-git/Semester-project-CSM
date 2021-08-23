@@ -1,6 +1,16 @@
 /* HEADER MEDIA */
-
+/* UL 508px */
 @media only screen and (min-width: 1000px) {
+    .logo-nav::before {
+        content: '';
+        position: absolute;
+        top: -80px;
+        right: 0;
+        width: 520px;
+        height: 10em;
+        background: var(--color-main-20);
+        clip-path: polygon(100% 50%,100% 71.5%, 2% 71.5%, 0% 62%, 2% 50%);
+    }
     .nav-btn {
         display: none;
     }
@@ -24,7 +34,16 @@
         display: flex;
         flex-direction: column;
         align-items: flex-end;
-        width: 190px;
+        width: 150px;
+    }
+    .totals-menu>li>ul>li:hover,
+    .totals-menu>li>ul>li:focus {
+        animation-name: bouncy-color;
+        animation-duration: 1.2s;
+    }
+    .totals-menu>li>ul>li>a:hover,
+    .totals-menu>li>ul>li>a:focus {
+        animation-name: unset;
     }
     header {
         height: auto;
@@ -41,11 +60,10 @@
         z-index: 5;
     }
     .totals-menu > li:not(:first-of-type) + li > ul{
-        background: rgba(16, 14, 14, 0.9);
-        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+        background: var(--color-main-20);
         backdrop-filter: blur(8px);
         clear: both;
-        border-radius: 5px;
+        border-radius: 0 0 10px 10px;
     }
     .totals-menu > li:not(:first-of-type) + li > ul li {
         display: flex;
@@ -55,6 +73,19 @@
     .info-cards__background::before {
         clip-path: polygon(0 0, 70% 0, 50% 100%, 0 100%);
     }
+    .teachers {
+        max-width: clamp(375px, 100vw, 1600px);
+        margin: 3em .5em;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .teacher-image {
+        display: block;
+        background-image: url(../assets/images/luke-ellis-craven-400722.jpg);
+        background-size: cover;
+        z-index: 1;
+    }
+
     /* nav,
     .logo-nav,
     header,

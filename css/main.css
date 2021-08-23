@@ -210,15 +210,31 @@ nav label {
     padding: .5em;
     display: block;
     width: max-content;
-    border-radius: 5px;
+}
+.active-page {
+    background-image: linear-gradient(var(--color-accent-high), var(--color-accent-high));
+    background-size: 100% 3px;
+    background-repeat: no-repeat;
+    background-position: bottom right;
 }
 .totals-menu a:hover,
 .totals-menu label:hover,
 .totals-menu a:focus,
-.totals-menu label:focus,
-.active-page {
-    background-color: rgba(189, 141, 141, 0.343);
-    border-radius: 5px;
+.totals-menu label:focus {
+    animation-name: bouncy-color;
+    animation-duration: 1.2s;
+}
+@keyframes bouncy-color {
+    0%, 100% {
+        background-image: linear-gradient(var(--color-accent-high), var(--color-accent-high));
+        background-size: 100% 2px;
+        background-repeat: no-repeat;
+        background-position: bottom right;
+    }
+    45%, 55% {
+        background-size: 100% 98%;
+        color: var(--color-main-20);
+    }
 }
 .totals-menu__sub--company,
 .totals-menu__sub--exhib {
@@ -340,20 +356,23 @@ h2 {
     display: flex;
     background-color: white;
 }
-.info-cards {
+.info-cards.kids,
+.info-cards.researcher,
+.info-cards__teacher--container {
     position: relative;
     padding: 6rem 2rem;
     display: grid;
     place-items: start;
     height: 100%;
 }
-.kids {
+.kids,
+.researcher {
     z-index: 6;
     width: clamp(60%, 40vw, 80%);
     color: white;
 }
 .info {
-    padding: 7rem 0 12rem;
+    padding: 7rem 0 18rem;
     position: relative;
     z-index: 2;
     filter: drop-shadow(3px 4px 5px rgba(0, 0, 0, 0.4)) drop-shadow(-3px -4px 5px rgba(0, 0, 0, 0.4));
@@ -365,20 +384,27 @@ h2 {
     background-color: rgb(255, 255, 255);
     height: 100%;
     inset: 0;
-    left: -300px;
+    left: -20vw;
     clip-path: 
-        polygon(0% 0%, 0% 93%, 9% 90%, 20% 93%, 40% 95%, 50% 89%, 77% 96%, 100% 92%, 100% 5%, 91% 10%, 74% 3%, 57% 4%, 35% 0%, 14% 5%);
+        polygon(0 0, 0% 93%, 9% 90%, 15% 95%, 40% 97%, 50% 93%, 60% 92%, 66% 96%, 77% 99%, 100% 92%, 100% 5%, 91% 10%, 74% 3%, 57% 4%, 35% 0%, 14% 5%);
     z-index: 0;
 }
 
 .info-cards__background {
     position: relative;
-    background-image: url(../assets/images/pexels-monstera-5063444.jpg);
     background-size: cover;
-    background-position: center center;
+    background-repeat: no-repeat;
     height: 500px;
     margin: 4rem .5rem;
     box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.4);
+}
+.info-cards__background:first-of-type {
+    background-image: url(../assets/images/pexels-monstera-5063444.jpg);
+    background-position: center center;
+}
+.info-cards__background:last-of-type {
+    background-image: url(../assets/images/billetto-editorial-334686.jpg);
+    background-position: center;
 }
 .info-cards__background::before {
     content: '';
@@ -394,13 +420,19 @@ h2 {
     margin-top: 8rem;
     z-index: 3;
 }
+.info-cards__header.noimage {
+    background-image:
+     linear-gradient(var(--color-main-20), var(--color-main-20));
+}
+.info-cards__header.image {
+    background-image:
+     linear-gradient(white, white);
+}
 .info-cards__header {
     text-transform: uppercase;
     font-size: 1.5rem;
     white-space: nowrap;
     /* CREDIT KEVIN POWELL #SHORTS */
-    background-image:
-     linear-gradient(white, white);
     background-size: 100% 3px;
     background-repeat: no-repeat;
     background-position: left bottom;
@@ -427,7 +459,9 @@ h2 {
 .info-cards__cta:hover {
     transform: scale(1.05);
 }
-
+.teacher-image {
+    display: none;
+}
 .misc {
     margin-top: 28vh;
     max-width: calc(100% - 1.1em);
