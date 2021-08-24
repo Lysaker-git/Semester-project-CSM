@@ -539,7 +539,9 @@ h2 {
     display: flex;
 }
 .iframe-container {
+    overflow: hidden;
 	position: relative;
+    padding-top: calc(461 / 352 * 100%)
 }
 .iframe-container iframe {
     position: relative;
