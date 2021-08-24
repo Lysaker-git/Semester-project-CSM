@@ -218,10 +218,8 @@ nav label {
     right: 0;
     max-height: 0;
     padding: 0;
-    background: rgba(16, 14, 14, 0.9);
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    backdrop-filter: blur(8px);
-    clear: both;
+    background: var(--color-main-20);
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.4);
     overflow: hidden;
     transition: padding 0s linear, max-height 0s ease-in;
     width: 100vw;
