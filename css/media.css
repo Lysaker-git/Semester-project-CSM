@@ -48,17 +48,6 @@
     header {
         height: auto;
     }
-    .header-background__small {
-        height: 7em;
-    }
-    .header-background__small:before {
-        content: '';
-        position: absolute;
-        mix-blend-mode: multiply;
-        inset: 0;
-        background-color: var(--color-accent-high);
-        z-index: 5;
-    }
     .totals-menu > li:not(:first-of-type) + li > ul{
         background: var(--color-main-20);
         backdrop-filter: blur(8px);

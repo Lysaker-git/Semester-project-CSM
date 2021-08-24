@@ -110,6 +110,17 @@ h1 {
     width: max-content;
     border-radius: .2rem;
 }
+.header-background__small {
+    height: 7em;
+}
+.header-background__small:before {
+    content: '';
+    position: absolute;
+    mix-blend-mode: multiply;
+    inset: 0;
+    background-color: var(--color-accent-high);
+    z-index: 5;
+}
 .logo {
     width: 200px;
     margin-right: auto;
