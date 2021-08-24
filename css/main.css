@@ -540,7 +540,6 @@ h2 {
 }
 .iframe-container {
 	position: relative;
-	height: 0;
 }
 .iframe-container iframe {
     position: relative;
