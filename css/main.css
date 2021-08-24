@@ -1,16 +1,8 @@
 @font-face {
-    font-family: BoisuFull;
-    src: url(../assets/fonts/Boisu-Full.otf);
-}
-@font-face {
-    font-family: BoisuStroke;
-    src: url(../assets/fonts/Boisu-Stroke.otf);
-}
-@font-face {
     font-family: 'library-font';
     src: url(../assets/fonts/Library\ 3\ am.otf);
 }
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;700;800;900&display=swap');
 
 * {
@@ -24,7 +16,7 @@
     --headerLarge: 'library-font', sans-serif;
     --headerFont-h2: 900 'Nunito Sans', sans-serif;
     --headerFont-h3: 700 'Nunito Sans', sans-serif;
-    --mainFont: 'Josefin Sans', sans-serif;
+    --mainFont: 'Atkinson Hyperlegible', sans-serif;
     --font-size: 1rem;
     font-size: var(--font-size);
     
