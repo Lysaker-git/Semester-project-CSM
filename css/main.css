@@ -89,6 +89,7 @@ header {
     inset: 0;
     background-color: var(--color-accent-high);
     clip-path: polygon(0 0, 100% 0, 100% 50%, 0 75%);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 50%, 0 75%);
     z-index: 5;
 }
 .hero-container {
@@ -419,6 +420,8 @@ h2 {
     inset: 0;
     left: -20vw;
     clip-path: 
+        polygon(0 0, 0% 93%, 9% 90%, 15% 95%, 40% 97%, 50% 93%, 60% 92%, 66% 96%, 77% 99%, 100% 92%, 100% 5%, 91% 10%, 74% 3%, 57% 4%, 35% 0%, 14% 5%);
+    -webkit-clip-path: 
         polygon(0 0, 0% 93%, 9% 90%, 15% 95%, 40% 97%, 50% 93%, 60% 92%, 66% 96%, 77% 99%, 100% 92%, 100% 5%, 91% 10%, 74% 3%, 57% 4%, 35% 0%, 14% 5%);
     z-index: 0;
 }
