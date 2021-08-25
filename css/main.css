@@ -819,3 +819,29 @@ footer::before {
 #booking-tickets > div > p {
     color: white;
 }
+.terms-privacy {
+    max-width: clamp(375px, 100vw, 1600px);
+    margin: 0 auto;
+    padding: 4em 2.2rem;
+}
+.terms-privacy h1 {
+    padding-bottom: 1rem;
+}
+.terms-privacy h2 {
+    padding-top: 2rem;
+    margin: unset;
+    font-size: 1.5rem;
+}
+.terms-privacy p {
+    margin: .3rem 0
+}
+.terms-privacy__main {
+    max-width: 50rem;
+}
+.terms-privacy__flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+.terms-privacy__flex > * {
+    flex: 1 1 448px;
+}
