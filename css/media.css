@@ -76,3 +76,6 @@
     .terms-privacy__right {
         margin-left: 2rem;
     }
+    .access-container__location div + div {
+        margin-top: unset;
+    }
