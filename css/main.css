@@ -47,7 +47,9 @@ header,
 .booking-container,
 .footer-container,
 .jobs-margin,
-.about-container {
+.about-container,
+.contact-container,
+.terms-privacy {
     max-width: clamp(375px, 100vw, 1600px);
 }
 /* Mobile setup */
@@ -273,7 +275,8 @@ nav label {
 .totals-menu__sub--exhib:hover {
     max-height: 500px;
 }
-.cta-style__blue {
+.cta-style__blue,
+.contact-container button {
     background-color: var(--color-main-20);
     color: var(--color-accent-high);
     text-decoration: none;
@@ -805,13 +808,8 @@ footer::before {
     color: white;
 }
 /* ---------------------------- */
-/* TERMS AND PRIVACY + ABOUT PAGE */
+/* TERMS AND PRIVACY + ABOUT PAGE + CONTACT PAGE*/
 
-.terms-privacy {
-    max-width: clamp(375px, 100vw, 1600px);
-    margin: 0 auto;
-    padding: 4em 2.2rem;
-}
 .terms-privacy h1 {
     padding-bottom: 1rem;
 }
@@ -821,21 +819,25 @@ footer::before {
     font-size: 1.5rem;
 }
 .terms-privacy p {
-    margin: .3rem 0
+    margin: .3rem 0;
 }
 .terms-privacy__main {
     max-width: 50rem;
 }
 .terms-privacy__flex,
-.about-container__flex {
+.about-container__flex,
+.contact-container__flex {
     display: flex;
     flex-wrap: wrap;
 }
 .terms-privacy__flex > *,
-.about-container__flex > *{
+.about-container__flex > *,
+.contact-container__flex > *{
     flex: 1 1 448px;
 }
-.about-container {
+.about-container,
+.contact-container,
+.terms-privacy {
     margin: 0 auto;
     padding: 4rem 2.2rem;
 }
@@ -844,20 +846,65 @@ footer::before {
     background: #e1e1e1;
     box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.4);
 }
-.about-container__left {
+.about-container__left,
+.contact-container__right {
     background-image: url(../assets/images/christina-wocintechchat-com-swi1DGRCshQ-unsplash.jpg);
     background-size: cover;
     background-position: center center;
     min-height: 500px;
+    width: 100%;
 }
-
 .about-container p {
     font-size: 1.2rem;
     line-height: 1.7rem;
     padding: 1.1rem 2.2rem;
-
+}
+.form-container > *{
+    display: block;
+}
+.contact-container {
+    width: 100%;
+}
+.contact-container__right,
+.contact-container__left {
+    padding: 2.2rem;
+}
+.contact-container input,
+.contact-container textarea,
+.contact-container select {
+    font-family: var(--mainFont);
+    font-size: 1rem;
+    padding: .5rem;
+    border-radius: 5px;
+    width: 100%;
+    border: none;
+    background-color: #F5F5F5;
+    resize: none;
+}
+.contact-container input:focus,
+.contact-container textarea:focus,
+.contact-container select:focus,
+button:focus {
+    border: 2px solid var(--color-main-20);
+}
+.contact-container label:not(:first-of-type) {
+    margin-top: .5rem;
+}
+.contact-container__flex {
+    background: white;
+    border-radius: 5px;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
+    margin-top: 2rem;
 }
 
+button {
+    margin: 1rem 0;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    padding: 1rem;
+
+}
 /* -------------------------------- */
 
 

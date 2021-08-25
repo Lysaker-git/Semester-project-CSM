@@ -48,7 +48,46 @@
             </div>
         </header>
     </div>
-
+    <main class="contact-container">
+        <h1>contact us</h1>
+        <div class="contact-container__flex">
+            <div class="contact-container__left">
+                <form class="form-container" action="POST" data-netlify="true">
+                    <label for="form-name" class="form-container__name">
+                        Full name:
+                    </label>
+                    <input type="text" id="form-name" required>
+        
+                    <label for="form-options" class="form-container__options">
+                        Subject:
+                    </label>
+                    <select id="form-options">
+                        <option value="" disabled selected>Choose Topic..</option>
+                        <option value="internship">Internship</option>
+                        <option value="volunteer">Volunteer</option>
+                        <option value="holiday-club">Holiday Club</option>
+                        <option value="special-events">Special Events</option>
+                        <option value="donation">Donate Collection</option>
+                        <option value="researchers">Research / Academics</option>
+                        <option value="other">Other topics...</option>
+                    </select>
+                    
+                    <label for="form-email" class="form-container__email">
+                        E-mail:
+                    </label>
+                    <input type="email" id="form-name" required>     
+                
+                    <label for="form-text" class="form-container__name">
+                        What can we do for you?
+                    </label>
+                    <textarea id="form-text" cols="30" rows="10" required></textarea>
+                    <button type="submit">send form</button>
+                    <p>..or call us during opening hours at<br>456-02502-84103</p>
+                </form>
+            </div>
+            <div class="contact-container__right"></div>
+        </div>
+    </main>
     <footer>
         <div class="footer-container">
             <section class="links">
