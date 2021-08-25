@@ -46,7 +46,8 @@ header,
 .info,
 .booking-container,
 .footer-container,
-.jobs-margin {
+.jobs-margin,
+.about-container {
     max-width: clamp(375px, 100vw, 1600px);
 }
 /* Mobile setup */
@@ -758,22 +759,6 @@ footer::before {
 .jobs-card p {
     text-transform: uppercase;
 }
-.about-container img,
-.exhib-news img {
-    max-width: calc(100% - 1em);
-    margin: .5em;
-}
-.about-container__text {
-    margin: .5em;
-}
-.about-container__text p {
-    font-weight: 300;
-    line-height: 2em;
-}
-.about-container__text > p + p {
-    margin-top: 2em;
-}
-
 /* BOOKING PAGE */
 
 .booking-container {
@@ -819,6 +804,9 @@ footer::before {
 #booking-tickets > div > p {
     color: white;
 }
+/* ---------------------------- */
+/* TERMS AND PRIVACY + ABOUT PAGE */
+
 .terms-privacy {
     max-width: clamp(375px, 100vw, 1600px);
     margin: 0 auto;
@@ -838,10 +826,38 @@ footer::before {
 .terms-privacy__main {
     max-width: 50rem;
 }
-.terms-privacy__flex {
+.terms-privacy__flex,
+.about-container__flex {
     display: flex;
     flex-wrap: wrap;
 }
-.terms-privacy__flex > * {
+.terms-privacy__flex > *,
+.about-container__flex > *{
     flex: 1 1 448px;
 }
+.about-container {
+    margin: 0 auto;
+    padding: 4rem 2.2rem;
+}
+.about-container__flex {
+    margin-top: 2rem;
+    background: #e1e1e1;
+    box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.4);
+}
+.about-container__left {
+    background-image: url(../assets/images/christina-wocintechchat-com-swi1DGRCshQ-unsplash.jpg);
+    background-size: cover;
+    background-position: center center;
+    min-height: 500px;
+}
+
+.about-container p {
+    font-size: 1.2rem;
+    line-height: 1.7rem;
+    padding: 1.1rem 2.2rem;
+
+}
+
+/* -------------------------------- */
+
+
