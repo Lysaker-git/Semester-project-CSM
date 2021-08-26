@@ -114,7 +114,8 @@ h1 {
     width: max-content;
     border-radius: .2rem;
 }
-.header-background__small {
+.header-background__small,
+header {
     height: 7em;
 }
 .header-background__small:before {
@@ -500,7 +501,7 @@ h2 {
     display: none;
 }
 .misc {
-    margin-top: 28vh;
+    margin-top: 5rem;
     max-width: calc(100% - 1.1em);
 }
 .misc-header {
@@ -975,28 +976,82 @@ button:focus {
     margin-top: 2rem;
 }
 .involved > section p {
-    max-width: 80%;
     line-height: 1.6rem;
-}
-.involved-support__right--img {
-    background-image: url(../assets/images/kelly-sikkema-4le7k9XVYjE-unsplash.jpg);
-    height: 100%;
-}
-.involved-volunteer__img {
-    background-image: url(../assets/images/hannah-busing-Zyx1bK9mqmA-unsplash.jpg);
-}
-.involved-internship__img {
-    background-image: url(../assets/images/brooke-cagle-g1Kr4Ozfoac-unsplash.jpg);
-}
-.involved-internship__img,
-.involved-volunteer__img,
-.involved-support__right--img {
-    background-size: cover;
-    background-position: center center;
 }
 .involved > section:not(:first-of-type) {
     padding-top: 4rem;
 }
 .involved-support {
     overflow: hidden;
+}
+.involved img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.involved-support__right h3  {
+    margin-top: 2rem;
+}
+.involved-support__right > p {
+    margin-left: auto;
+    font-size: .8rem;
+    text-align: end;
+}
+.involved-support__right form {
+    position: relative;
+    width: 100%;
+}
+.involved-support__right form > * {
+    display: block;
+}
+.involved-support__right form label {
+    margin-top: 1em;
+}
+.involved-support__right form > input {
+    width: 4.5em;
+    padding: .5em;
+}
+.involved-support__right form > button {
+    border: none;
+    padding: .5em;
+    border-radius: 5px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.involved-support__right--img {
+    height: 8rem;
+}
+.involved-volunteer {
+    display: grid !important;
+    grid-template-columns: 1fr;
+    grid-template-rows: max-content auto;
+    grid-template-areas: 
+    "content"
+    "img"
+    ;
+    gap: 1rem 0;
+}
+.involved-volunteer__img {
+    grid-area: img;
+    max-height: 400px;
+}
+.involved-volunteer__right {
+    grid-area: content;
+}
+.involved-volunteer__right p:first-of-type,
+.involved-support__left p:first-of-type,
+.involved-internship__left p:first-of-type{
+    margin-top: .5rem;
+}
+.involved-internship__img {
+    padding-top: 1rem;
+    max-height: 400px;
+}
+.involved section div > a {
+    display: block;
+    width: 100%;
+    margin: 1rem 0;
+    padding: .5rem;
+    text-align: center;
 }

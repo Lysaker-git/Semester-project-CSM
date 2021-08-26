@@ -79,4 +79,25 @@
     .access-container__location div + div {
         margin-top: unset;
     }
+    .involved-volunteer {
+        display: flex !important;
+    }
+    .involved section {
+        gap: 3rem;
+    }
+    .involved-support__left,
+    .involved-volunteer__right,
+    .involved-internship__left {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .involved-support__left p:last-of-type,
+    .involved-volunteer__right p:last-of-type,
+    .involved-internship__left p:last-of-type {
+        margin-top: auto;
+    }
+    .involved section div > a {
+        margin-bottom: 0;
+    }
 }
