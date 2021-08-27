@@ -129,4 +129,12 @@
         height: 100%;
         object-fit: cover;
     }
+    /* .kids-margin p {
+        background-color: white;
+        position: relative;
+        max-width: 40rem;
+        font-size: clamp(1rem,3vw,1.5rem);
+        line-height: 2.5rem;
+        padding: 3rem;
+    } */
 }

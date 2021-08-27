@@ -680,14 +680,19 @@ footer::before {
 }
 
 .kids-margin {
-    margin: 0 2.2em;
+    margin: 0 auto;
 }
-.kids-margin h1,
+.kids-margin > * {
+    margin: 4rem 2.2rem 0 2.2rem; 
+}
 .about-container h1,
 .exhib-news h1 {
     max-width: max-content;
     padding: unset;
     margin: .5rem;
+}
+.kids-img:last-of-type {
+    object-position: 0 0;
 }
 .flex-content {
     display: flex;
@@ -697,7 +702,7 @@ footer::before {
 }
 .flex-content > * {
     margin: 2em 0 0;
-    flex: 1 1 305px;
+    flex: 1 1 500px;
 }
 .kids-text {
     display: grid;
@@ -773,45 +778,315 @@ footer::before {
 .booking-container {
     margin: 0 auto;
     padding: 2.2rem;
+    max-width: clamp(375px, 100vw, 1600px);
 }
 .booking-selection {
-    width: clamp(375px, 100vw, 1600px);
+    position: relative;
+    display: block;
+    max-width: var(--max-width);
 }
-.booking-selection>input {
+.booking-selection>input,
+.interface {
     display: none;
-}
-.booking-selection label {
-    cursor: pointer;
 }
 .booking-selection > div {
     background-image: url(../assets/images/khamkeo-vilaysing-a-KI-IGu01k-unsplash\ copy.jpg);
     background-position: top left;
     background-size: cover;
-    height: 600px;
+    height: max-content;
+    width: 100%;
+}
+
+.booking-selection > label {
+    position: relative;
+    display: inline-block;
+    text-transform: uppercase;
+    padding: .5rem 5rem .5rem 5rem;
+    cursor: pointer;
+    margin-top: 4rem;
+    background-color: var(--color-accent-low);
+    color: var(--color-main-20);
+    clip-path: polygon(0 0, 80% 0, 100% 100%, 0 100%);
+    -moz-clip-path: polygon(0 0, 80% 0, 100% 100%, 0 100%);
+    text-align: start;
+    font-size: 1.5rem;
+}
+.booking-selection input:checked + label {
+    background-color: var(--color-accent-high);
+}
+.booking-selection > label:not(:first-of-type) {
+    margin-left: -3.5rem;
+}
+.booking-selection > label:nth-child(2) {
+    z-index: 3;
+}
+.booking-selection > label:nth-child(4) {
+    z-index: 2;
+}
+.booking-selection > label:nth-child(6) {
+    z-index: 1;
+}
+#booking-tickets > * {
+    color: white;
+}
+#booking-tickets form {
+    display: flex;
 }
 /* selecting variant */
 
 #booking-tour,
 #booking-school,
 #booking-done,
-#booking-tickets {
+#booking-tickets,
+#booking-first__input,
+#booking-second__input,
+#booking-third__input {
     display: none;
 }
 .booking-selection__btn[value="ticket"]:checked ~ #booking-tickets,
 .booking-selection__btn[value="tour"]:checked ~ #booking-tour,
 .booking-selection__btn[value="school"]:checked ~ #booking-school,
-.booking-selection__btn[value="done"]:checked ~ #booking-done
+.booking-selection__btn[value="done"]:checked ~ #booking-done,
+.interface[value="one"]:checked ~ #booking-first__input,
+.interface[value="two"]:checked ~ #booking-second__input,
+.interface[value="three"]:checked ~ #booking-third__input
 {
     display: flex;
 }
-#booking-tickets > div {
+.booking-tickets__form section:first-of-type,
+.booking-tickets__form section:last-of-type {
+    flex-direction: column;
+    position: relative;
+    padding: 2.2rem;
+}
+.booking-tickets__second--input {
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+    padding: 2.2rem;
+    max-width: 40rem;
+}
+.booking-tickets__form section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
     background-color: var(--color-accent-high);
-    /* mix-blend-mode: multiply; */
-    width: 30%;
-    height: 600px;
+    mix-blend-mode: multiply;
+    z-index: 1;
+}
+.booking-tickets__form section > * {
+    z-index: 2;
+}
+.booking-tickets__form section > h2 {
+    text-align: center;
+}
+.booking-tickets__form section h2 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0 0 1rem;
+}
+.bt-form__label {
+    cursor: pointer;
+    display: block;
+    max-width: max-content;
+    text-transform: uppercase;
+    font-weight: 700;
+    border-radius: 4px;
+    padding: .5rem 2rem;
+    background-color: var(--color-accent-high);
+    color: var(--color-main-20);
+    transform: translateY(0);
+    transition: transform .02s linear;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
+    height: max-content;
+}
+.bt-form__label:active {
+    transform: translateY(-.1rem);
+}
+.bt-radio__selection {
+    display: flex;
+}
+.bt-radio__selection input {
+    display: none;
+}
+.bt-radio__selection label,
+.bt-radio__selection p {
+    display: grid;
+    border: 2px solid var(--color-accent-high);
+    text-transform: uppercase;
+    height: 4rem;
+    text-align: center;
+    place-items: center;
+    max-width: 3rem;
+    font-size: 1.2rem;
+    margin: .2rem
+}
+.bt-radio__selection p {
+    background-color: var(--color-main-20);
+    border-color: var(--color-main-20);
+}
+.bt-time__selection {
+    margin: 5rem 0;
+}
+.bt-time__selection input {
+    display: block;
+    margin-left: auto;
+    padding: .2rem .5rem;  
+    border: none;
+    background-color: #F5F5F5;
+    border-radius: 5px;
+    margin-bottom: .2rem;
+}
+.bt-time__selection label {
+    display: block;
+    width: 100%;
+    text-align: right;
+}
+.bt-time__selection div {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    text-align: end;
+}
+.bt-time__selection div p {
+    opacity: .8;
+}
+.booking-tickets__first--input>label {
+    margin-left: auto;
+}
+.unset-flex {
+    display: block !important;
 }
 #booking-tickets > div > p {
     color: white;
+}
+
+.bt-tickets__selection--container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-areas: 
+    "title-1 price-1 input-1"
+    "title-2 price-2 input-2"
+    "title-3 price-3 input-3"
+    "title-4 price-4 input-4"
+    "title-5 price-5 input-5"
+    "total-p . total"
+    ;
+    gap: .5rem;
+    max-width: 30rem;
+}
+.bt-tickets__selection--container p:nth-child(1) {
+    grid-area: title-1;
+}
+.bt-tickets__selection--container p:nth-child(2) {
+    grid-area: title-2;
+}
+.bt-tickets__selection--container p:nth-child(3) {
+    grid-area: title-3;
+}
+.bt-tickets__selection--container p:nth-child(4) {
+    grid-area: title-4;
+}
+.bt-tickets__selection--container p:nth-child(5) {
+    grid-area: title-5;
+}
+.bt-tickets__selection--container p:nth-child(6) {
+    grid-area: price-1;
+}
+.bt-tickets__selection--container p:nth-child(7) {
+    grid-area: price-2;
+}
+.bt-tickets__selection--container p:nth-child(8) {
+    grid-area: price-3;
+}
+.bt-tickets__selection--container p:nth-child(9) {
+    grid-area: price-4;
+}
+.bt-tickets__selection--container p:nth-child(10) {
+    grid-area: price-5;
+}
+.bt-tickets__selection--container *:nth-child(11) {
+    grid-area: input-1;
+}
+.bt-tickets__selection--container *:nth-child(12) {
+    grid-area: input-2;
+}
+.bt-tickets__selection--container *:nth-child(13) {
+    grid-area: input-3;
+}
+.bt-tickets__selection--container *:nth-child(14) {
+    grid-area: input-4;
+}
+.bt-tickets__selection--container *:nth-child(15) {
+    grid-area: input-5;
+}
+.bt-tickets__selection--container *:nth-child(16) {
+    grid-area: total-p;
+}
+.bt-tickets__selection--container *:nth-child(17) {
+    grid-area: total;
+}
+.bt-tickets__selection--container input,
+.bt-tickets__special--text input {
+    width: 4rem;
+    padding: .65rem;
+    border: none;
+    display: block;
+    border-radius: 5px;
+    text-align: center;
+}
+.bt-tickets__selection--container span {
+    font-size: .8rem;
+    opacity: .8;
+}
+.bt-tickets__special--text {
+    display: grid;
+    grid-template: repeat(3, 1fr) / 1fr 1fr;
+    max-width: 30rem;
+    gap: .5rem;
+}
+.bt-tickets__special--text input[type="checkbox"] {
+    position: relative;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: white;
+}
+.bt-tickets__special--text input[type="checkbox"]:checked::before {
+    position: absolute;
+    content:"\2714";
+    font-size: 1.5rem;
+    text-align: center;
+    inset: 0;
+}
+.bt-tickets__donation {
+    max-width: 10rem;
+}
+.booking-tickets__second--input > .bt-form__label {
+    align-self: flex-end;
+    margin: 0 0 0 .5rem;
+}
+.bt-tickets__third--input input,
+.bt-tickets__third--input textarea
+{
+    padding: .5rem;
+    margin-bottom: .5rem;
+    border-radius: 5px;
+    border: none;
+    resize: none;
+}
+.bt-tickets__third--input button {
+    cursor: pointer;
+    border: none;
+    padding: .5rem;
+    text-transform: uppercase;
+    background: var(--color-main-20);
+    color: var(--color-accent-high);
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    border-radius: 5px;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.6);
 }
 /* ---------------------------- */
 /* TERMS AND PRIVACY + ABOUT PAGE + CONTACT PAGE*/
