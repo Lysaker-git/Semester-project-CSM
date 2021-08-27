@@ -120,7 +120,6 @@
         grid-column: 1 / 5;
         grid-row: 1 / span 3;
         height: min-content;
-        border: 1px red solid
     }
     .exhib-news__energ img {
         grid-column: 4 / 7;

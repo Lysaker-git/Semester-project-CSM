@@ -84,7 +84,7 @@
                             <label for="date-selection__six">13 sun</label>
                         </div>
                         <div class="bt-time__selection">
-                            <input type="time" name="" id="time-selection" min="09:00" max="18:00">
+                            <input type="time" id="time-selection" min="09:00" max="18:00">
                             <label for="time-selection">Select your time for arrival</label>
                             <div>
                                 <p>Tuesday - Thursday: 10:00 - 14:00</p>
@@ -130,7 +130,7 @@
                                 <label for="braille">Braille Guide</label>
                                 <input min="0" max="20" type="number"  id="braille">
                                 <label for="wheelchair">Wheelchair-access</label>
-                                <input min="0" max="20" type="checkbox"  id="wheelchair">
+                                <input type="checkbox"  id="wheelchair">
                             </div>
                         </div>
                         <label class="bt-form__label" for="interface-one">Back</label>
@@ -141,11 +141,11 @@
                         <label for="bt-tickets__name">Full Name</label>
                         <input type="text" id="bt-tickets__name">
                         <label for="bt-tickets__phone">Phone Number</label>
-                        <input type="number" id="bt-tickets__phone">
+                        <input type="tel" id="bt-tickets__phone">
                         <label for="bt-tickets__email">E-mail</label>
                         <input type="email" id="bt-tickets__email">
                         <label for="bt-tickets__other">Other Comments</label>
-                        <textarea name="" id="" cols="15" rows="5"></textarea>
+                        <textarea id="bt-tickets__other" cols="15" rows="5"></textarea>
                         <button type="submit">Book</button>
                         <label class="bt-form__label" for="interface-two">back</label>
                     </section>
