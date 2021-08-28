@@ -62,12 +62,12 @@
             <label for="selection-school">School</label>
             <input type="radio" name="selection" id="selection-done" class="booking-selection__btn" value="done">
             <div id="booking-tickets">
-                <form target="_parent"name="tickets" method="POST" data-netlify="true" class="booking-tickets__form">
+                <form name="tickets" method="POST" data-netlify="true" class="booking-tickets__form">
                     <input type="radio" name="interface" id="interface-one" class="interface" value="one" checked>
                     <input type="radio" name="interface" id="interface-two" class="interface" value="two">
                     <input type="radio" name="interface" id="interface-three" class="interface" value="three">
-                    <fieldset class="booking-tickets__first--input" id="booking-first__input">
-                        <legend>Select date and time</legend>
+                    <section class="booking-tickets__first--input" id="booking-first__input">
+                        <h2>Select date and time</h2>
                         <div class="bt-radio__selection">
                             <p>jun</p>
                             <input type="radio" name="date-selection" id="date-selection__one">
@@ -94,10 +94,10 @@
                             </div>
                         </div>
                         <label class="bt-form__label" for="interface-two">Next</label>
-                    </fieldset>
-                    <div class="booking-tickets__second--input" id="booking-second__input">
-                        <fieldset class="bt-tickets__selection">
-                            <legend>Ticket price</legend>
+                    </section>
+                    <section class="booking-tickets__second--input" id="booking-second__input">
+                        <div class="bt-tickets__selection">
+                            <h2>Ticket price</h2>
                             <div class="bt-tickets__selection--container">
                                 <p>Adult <br><span>with 20,- donation</span></p>
                                 <p>Adult <br><span>with 40,- donation</span></p>
@@ -117,13 +117,13 @@
                                 <p>Total Sum</p>
                                 <p>40 NOK</p>
                             </div>
-                        </fieldset>
+                        </div>
                         <div class="bt-tickets__donation">
                             <h2>Donations</h2>
                             <p>We need your help! If you are able, you can choose to donate a small sum with your ticket. </p>
                         </div>
-                        <fieldset class="bt-tickets__special">
-                            <legend>Do you need:</legend>
+                        <div class="bt-tickets__special">
+                            <h2>Do you need:</h2>
                             <div class="bt-tickets__special--text">
                                 <label for="audio">Audio Guide</label>
                                 <input min="0" max="20" type="number"  id="audio">
@@ -132,12 +132,12 @@
                                 <label for="wheelchair">Wheelchair-access</label>
                                 <input type="checkbox"  id="wheelchair">
                             </div>
-                        </fieldset>
+                        </div>
                         <label class="bt-form__label" for="interface-one">Back</label>
                         <label class="bt-form__label" for="interface-three">Next</label>
-                    </div>
-                    <fieldset class="bt-tickets__third--input" id="booking-third__input">
-                        <legend>Main contact</legend>
+                    </section>
+                    <section class="bt-tickets__third--input" id="booking-third__input">
+                        <h2>Main contact</h2>
                         <label for="bt-tickets__name">Full Name</label>
                         <input type="text" id="bt-tickets__name">
                         <label for="bt-tickets__phone">Phone Number</label>
@@ -148,7 +148,7 @@
                         <textarea id="bt-tickets__other" cols="15" rows="5"></textarea>
                         <button type="submit">Book</button>
                         <label class="bt-form__label" for="interface-two">back</label>
-                    </fieldset>
+                    </section>
                 </form>
             </div>
             <section id="booking-tour">

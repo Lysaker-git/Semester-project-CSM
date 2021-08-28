@@ -853,8 +853,8 @@ footer::before {
 {
     display: flex;
 }
-.booking-tickets__form fieldset:first-of-type,
-.booking-tickets__form fieldset:last-of-type {
+.booking-tickets__form section:first-of-type,
+.booking-tickets__form section:last-of-type {
     flex-direction: column;
     position: relative;
     padding: 2.2rem;
@@ -866,7 +866,7 @@ footer::before {
     padding: 2.2rem;
     max-width: 40rem;
 }
-.booking-tickets__form fieldset::before {
+.booking-tickets__form section::before {
     content: '';
     position: absolute;
     inset: 0;
@@ -874,13 +874,13 @@ footer::before {
     mix-blend-mode: multiply;
     z-index: 1;
 }
-.booking-tickets__form fieldset > * {
+.booking-tickets__form section > * {
     z-index: 2;
 }
-.booking-tickets__form fieldset > legend {
+.booking-tickets__form section > h2 {
     text-align: center;
 }
-.booking-tickets__form fieldset legend {
+.booking-tickets__form section h2 {
     font-size: 1.2rem;
     font-weight: 600;
     margin: 0 0 1rem;
