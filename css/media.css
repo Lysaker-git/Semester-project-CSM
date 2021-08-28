@@ -128,6 +128,15 @@
         height: 100%;
         object-fit: cover;
     }
+    .evolution {
+        margin-bottom: 10rem;
+    }
+    .biology div {
+        top: -5rem;
+    }
+    .biology img {
+        box-shadow: 4px 0 4px rgba(0, 0, 0, 0.4);
+    }
     /* .kids-margin p {
         background-color: white;
         position: relative;
