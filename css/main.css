@@ -362,8 +362,7 @@ h2 {
 }
 .news-cards__img,
 .exhibitions-cards__img,
-.misc-bottom__img,
-.kids-img {
+.misc-bottom__img {
     display: block;
     object-fit: cover;
     width: 100%;
@@ -699,28 +698,36 @@ footer::before {
     flex-wrap: wrap;
     justify-content: center;
     padding: 0 .5em;
+    gap: 2rem;
+    height: clamp(fit-content, max-content, 20rem);
 }
 .flex-content > * {
-    margin: 2em 0 0;
     flex: 1 1 500px;
+}
+.flex-content:nth-last-of-type(2) {
+    flex-direction: row-reverse;
 }
 .kids-text {
     display: grid;
     place-items: center;
     font-weight: 300;
-    line-height: 1.6em;
+    line-height: 2em;
+    font-size: 1.5rem;
 }
 .kids-margin > .cta-btn__blue--big {
+    text-decoration: none;
     background-color: var(--color-main-20);
     color: var(--color-accent-high);
     text-transform: uppercase;
     text-overflow: 700;
     font-size: calc(var(--font-size) + .2rem);
-    margin: 2em 0 3em .5em;
+    margin: 2em 0 3em 2.2em;
 }
 
-.kids-margin > img {
-    height: 100%;
+.kids-img {
+    height: 20rem;
+    object-fit: cover;
+    max-width: 100%;
 }
 .jobs-margin {
     margin: 0 auto;
