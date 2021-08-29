@@ -595,11 +595,12 @@ footer {
 footer::before {
     content: '';
     position: absolute;
-    background-image: url(../assets/images/footer-decor.svg);
+    background-image: url(../assets/images/Decor-footer@2x.png);
     background-position: center center;
-    top: -11.3rem;
+    background-size: 60rem;
+    top: -11.05rem;
     left: -10rem;
-    width: 150vw;
+    width: 120vw;
     height: 20rem;
     z-index: -1;
 }
