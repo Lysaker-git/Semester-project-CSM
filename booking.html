@@ -64,27 +64,31 @@
             <input type="radio" name="selection" id="selection-school" class="booking-selection__btn" value="school">
             <label for="selection-school">School</label>
             <input type="radio" name="selection" id="selection-done" class="booking-selection__btn" value="done">
-            <div id="booking-tickets">
+            <div id="booking-tickets" class="booking-styling">
                 <form name="tickets" method="POST" data-netlify="true" class="booking-tickets__form">
                     <input type="radio" name="interface" id="interface-one" class="interface" value="one" checked>
                     <input type="radio" name="interface" id="interface-two" class="interface" value="two">
                     <input type="radio" name="interface" id="interface-three" class="interface" value="three">
-                    <section class="booking-tickets__first--input" id="booking-first__input">
+                    <fieldset class="booking-tickets__first--input" id="booking-first__input">
                         <h2>Select date and time</h2>
                         <div class="bt-radio__selection">
-                            <p>jun</p>
-                            <input type="radio" name="date-selection" id="date-selection__one">
-                            <label for="date-selection__one">8 tue</label>
-                            <input type="radio" name="date-selection" id="date-selection__two">
-                            <label for="date-selection__two">9 wed</label>
-                            <input type="radio" name="date-selection" id="date-selection__three">
-                            <label for="date-selection__three">10 thu</label>
-                            <input type="radio" name="date-selection" id="date-selection__four">
-                            <label for="date-selection__four">11 fri</label>
-                            <input type="radio" name="date-selection" id="date-selection__five">
-                            <label for="date-selection__five">12 sat</label>
-                            <input type="radio" name="date-selection" id="date-selection__six">
-                            <label for="date-selection__six">13 sun</label>
+                            <div class="bt-radio__selection--flexresponsive">
+                                <p>jun</p>
+                                <input type="radio" name="date-selection" id="date-selection__one">
+                                <label for="date-selection__one">8<br>tue</label>
+                                <input type="radio" name="date-selection" id="date-selection__two">
+                                <label for="date-selection__two">9<br>wed</label>
+                                <input type="radio" name="date-selection" id="date-selection__three">
+                                <label for="date-selection__three">10<br>thu</label>
+                            </div>
+                            <div class="bt-radio__selection--flexresponsive">
+                                <input type="radio" name="date-selection" id="date-selection__four">
+                                <label for="date-selection__four">11<br>fri</label>
+                                <input type="radio" name="date-selection" id="date-selection__five">
+                                <label for="date-selection__five">12<br>sat</label>
+                                <input type="radio" name="date-selection" id="date-selection__six">
+                                <label for="date-selection__six">13<br>sun</label>
+                            </div>
                         </div>
                         <div class="bt-time__selection">
                             <input type="time" id="time-selection" min="09:00" max="18:00">
@@ -97,8 +101,8 @@
                             </div>
                         </div>
                         <label class="bt-form__label" for="interface-two">Next</label>
-                    </section>
-                    <section class="booking-tickets__second--input" id="booking-second__input">
+                    </fieldset>
+                    <fieldset class="booking-tickets__second--input" id="booking-second__input">
                         <div class="bt-tickets__selection">
                             <h2>Ticket price</h2>
                             <div class="bt-tickets__selection--container">
@@ -136,10 +140,12 @@
                                 <input type="checkbox"  id="wheelchair">
                             </div>
                         </div>
-                        <label class="bt-form__label" for="interface-one">Back</label>
-                        <label class="bt-form__label" for="interface-three">Next</label>
-                    </section>
-                    <section class="bt-tickets__third--input" id="booking-third__input">
+                        <div class="bt-tickets__control--buttons">
+                            <label class="bt-form__label" for="interface-one">Back</label>
+                            <label class="bt-form__label" for="interface-three">Next</label>
+                        </div>
+                    </fieldset>
+                    <fieldset class="bt-tickets__third--input" id="booking-third__input">
                         <h2>Main contact</h2>
                         <label for="bt-tickets__name">Full Name</label>
                         <input type="text" id="bt-tickets__name">
@@ -151,19 +157,201 @@
                         <textarea id="bt-tickets__other" cols="15" rows="5"></textarea>
                         <button type="submit">Book</button>
                         <label class="bt-form__label" for="interface-two">back</label>
-                    </section>
+                    </fieldset>
                 </form>
             </div>
-            <section id="booking-tour">
-                <h3>tour</h3>
-            </section>
-            <div id="booking-school">
-                <h3>school</h3>
-                <!-- <label for="selection-done">Complete</label> -->
+            <div id="booking-tour" class="booking-styling">
+                <form name="tickets" method="POST" data-netlify="true" class="booking-tickets__form">
+                    <input type="radio" name="interface-2" id="interface-one__btour" class="interface-btour" value="one" checked>
+                    <input type="radio" name="interface-2" id="interface-two__btour" class="interface-btour" value="two">
+                    <input type="radio" name="interface-2" id="interface-three__btour" class="interface-btour" value="three">
+                    <fieldset class="booking-tickets__first--input" id="booking-first__input--btour">
+                        <h2>Select date and time</h2>
+                        <div class="bt-radio__selection">
+                            <div class="bt-radio__selection--flexresponsive">
+                                <p>jun</p>
+                                <input type="radio" name="date-selection__btour" id="date-selection__one--btour">
+                                <label for="date-selection__one--btour">8<br>tue</label>
+                                <input type="radio" name="date-selection__btour" id="date-selection__two--btour">
+                                <label for="date-selection__two--btour">9<br>wed</label>
+                                <input type="radio" name="date-selection__btour" id="date-selection__three--btour">
+                                <label for="date-selection__three--btour">10<br>thu</label>
+                            </div>
+                            <div class="bt-radio__selection--flexresponsive">
+                                <input type="radio" name="date-selection__btour" id="date-selection__four--btour">
+                                <label for="date-selection__four--btour">11<br>fri</label>
+                                <input type="radio" name="date-selection__btour" id="date-selection__five--btour">
+                                <label for="date-selection__five--btour">12<br>sat</label>
+                                <input type="radio" name="date-selection__btour" id="date-selection__six--btour">
+                                <label for="date-selection__six--btour">13<br>sun</label>
+                            </div>
+                        </div>
+                        <div class="bt-time__selection">
+                            <input type="time" id="time-selection__btour" min="09:00" max="18:00">
+                            <label for="time-selection__btour">Select your time for arrival</label>
+                            <div>
+                                <p>Tuesday - Thursday: 10:00 - 14:00</p>
+                                <p>Friday: 10:00 - 18:00</p>
+                                <p>Saturday - Sunday: 09:00 - 12:00</p>
+                                <p>We do not allow entry the last hour of our day</p>
+                            </div>
+                        </div>
+                        <label class="bt-form__label" for="interface-two__btour">Next</label>
+                    </fieldset>
+                    <fieldset class="booking-tickets__second--input" id="booking-second__input--btour">
+                        <div class="bt-tickets__selection">
+                            <h2>Ticket price</h2>
+                            <div class="bt-tickets__selection--container">
+                                <p>Adult <br><span>with 20,- donation</span></p>
+                                <p>Adult <br><span>with 40,- donation</span></p>
+                                <p>Adult <br><span>with 100,- donation</span></p>
+                                <p>Adult</p>
+                                <p>Adult</p>
+                                <p>20 NOK</p>
+                                <p>40 NOK</p>
+                                <p>100 NOK</p>
+                                <p>FREE</p>
+                                <p>FREE</p>
+                                <input type="number" min="0" max="20">
+                                <input type="number" min="0" max="20">
+                                <input type="number" min="0" max="20">
+                                <input type="number" min="0" max="20">
+                                <input type="number" min="0" max="20">
+                                <p>Total Sum</p>
+                                <p>40 NOK</p>
+                            </div>
+                        </div>
+                        <div class="bt-tickets__donation">
+                            <h2>Donations</h2>
+                            <p>We need your help! If you are able, you can choose to donate a small sum with your ticket. </p>
+                        </div>
+                        <div class="bt-tickets__special">
+                            <h2>Do you need:</h2>
+                            <div class="bt-tickets__special--text">
+                                <label for="audio">Audio Guide</label>
+                                <input min="0" max="20" type="number"  id="audio">
+                                <label for="braille">Braille Guide</label>
+                                <input min="0" max="20" type="number"  id="braille">
+                                <label for="wheelchair">Wheelchair-access</label>
+                                <input type="checkbox"  id="wheelchair">
+                            </div>
+                        </div>
+                        <div class="bt-tickets__control--buttons">
+                            <label class="bt-form__label" for="interface-one__btour">Back</label>
+                            <label class="bt-form__label" for="interface-three__btour">Next</label>
+                        </div>
+                    </fieldset>
+                    <fieldset class="bt-tickets__third--input" id="booking-third__input--btour">
+                        <h2>Main contact</h2>
+                        <label for="bt-tickets__name">Full Name</label>
+                        <input type="text" id="bt-tickets__name">
+                        <label for="bt-tickets__phone">Phone Number</label>
+                        <input type="tel" id="bt-tickets__phone">
+                        <label for="bt-tickets__email">E-mail</label>
+                        <input type="email" id="bt-tickets__email">
+                        <label for="bt-tickets__other">Other Comments</label>
+                        <textarea id="bt-tickets__other" cols="15" rows="5"></textarea>
+                        <button type="submit">Book</button>
+                        <label class="bt-form__label" for="interface-two__btour">back</label>
+                    </fieldset>
+                </form>
             </div>
-            <section id="booking-done">
-                <h3>done</h3>
-            </section>
+            <div id="booking-school" class="booking-styling">
+                <form name="tickets" method="POST" data-netlify="true" class="booking-tickets__form">
+                    <input type="radio" name="interface" id="interface-one" class="interface" value="one" checked>
+                    <input type="radio" name="interface" id="interface-two" class="interface" value="two">
+                    <input type="radio" name="interface" id="interface-three" class="interface" value="three">
+                    <fieldset class="booking-tickets__first--input" id="booking-first__input">
+                        <h2>Select date and time</h2>
+                        <div class="bt-radio__selection">
+                            <div class="bt-radio__selection--flexresponsive">
+                                <p>jun</p>
+                                <input type="radio" name="date-selection" id="date-selection__one">
+                                <label for="date-selection__one">8<br>tue</label>
+                                <input type="radio" name="date-selection" id="date-selection__two">
+                                <label for="date-selection__two">9<br>wed</label>
+                                <input type="radio" name="date-selection" id="date-selection__three">
+                                <label for="date-selection__three">10<br>thu</label>
+                            </div>
+                            <div class="bt-radio__selection--flexresponsive">
+                                <input type="radio" name="date-selection" id="date-selection__four">
+                                <label for="date-selection__four">11<br>fri</label>
+                                <input type="radio" name="date-selection" id="date-selection__five">
+                                <label for="date-selection__five">12<br>sat</label>
+                                <input type="radio" name="date-selection" id="date-selection__six">
+                                <label for="date-selection__six">13<br>sun</label>
+                            </div>
+                        </div>
+                        <div class="bt-time__selection">
+                            <input type="time" id="time-selection" min="09:00" max="18:00">
+                            <label for="time-selection">Select your time for arrival</label>
+                            <div>
+                                <p>Tuesday - Thursday: 10:00 - 14:00</p>
+                                <p>Friday: 10:00 - 18:00</p>
+                                <p>Saturday - Sunday: 09:00 - 12:00</p>
+                                <p>We do not allow entry the last hour of our day</p>
+                            </div>
+                        </div>
+                        <label class="bt-form__label" for="interface-two">Next</label>
+                    </fieldset>
+                    <fieldset class="booking-tickets__second--input" id="booking-second__input">
+                        <div class="bt-tickets__selection">
+                            <h2>Ticket price</h2>
+                            <div class="bt-tickets__selection--container">
+                                <p>Adult <br><span>with 20,- donation</span></p>
+                                <p>Adult <br><span>with 40,- donation</span></p>
+                                <p>Adult <br><span>with 100,- donation</span></p>
+                                <p>Adult</p>
+                                <p>Adult</p>
+                                <p>20 NOK</p>
+                                <p>40 NOK</p>
+                                <p>100 NOK</p>
+                                <p>FREE</p>
+                                <p>FREE</p>
+                                <input type="number" min="0" max="20">
+                                <input type="number" min="0" max="20">
+                                <input type="number" min="0" max="20">
+                                <input type="number" min="0" max="20">
+                                <input type="number" min="0" max="20">
+                                <p>Total Sum</p>
+                                <p>40 NOK</p>
+                            </div>
+                        </div>
+                        <div class="bt-tickets__donation">
+                            <h2>Donations</h2>
+                            <p>We need your help! If you are able, you can choose to donate a small sum with your ticket. </p>
+                        </div>
+                        <div class="bt-tickets__special">
+                            <h2>Do you need:</h2>
+                            <div class="bt-tickets__special--text">
+                                <label for="audio">Audio Guide</label>
+                                <input min="0" max="20" type="number"  id="audio">
+                                <label for="braille">Braille Guide</label>
+                                <input min="0" max="20" type="number"  id="braille">
+                                <label for="wheelchair">Wheelchair-access</label>
+                                <input type="checkbox"  id="wheelchair">
+                            </div>
+                        </div>
+                        <div class="bt-tickets__control--buttons">
+                            <label class="bt-form__label" for="interface-one">Back</label>
+                            <label class="bt-form__label" for="interface-three">Next</label>
+                        </div>
+                    </fieldset>
+                    <fieldset class="bt-tickets__third--input" id="booking-third__input">
+                        <h2>Main contact</h2>
+                        <label for="bt-tickets__name">Full Name</label>
+                        <input type="text" id="bt-tickets__name">
+                        <label for="bt-tickets__phone">Phone Number</label>
+                        <input type="tel" id="bt-tickets__phone">
+                        <label for="bt-tickets__email">E-mail</label>
+                        <input type="email" id="bt-tickets__email">
+                        <label for="bt-tickets__other">Other Comments</label>
+                        <textarea id="bt-tickets__other" cols="15" rows="5"></textarea>
+                        <button type="submit">Book</button>
+                        <label class="bt-form__label" for="interface-two">back</label>
+                    </fieldset>
+                </form>
+            </div>
         </div>
     </main>
     <footer>

@@ -794,7 +794,8 @@ footer::before {
     max-width: var(--max-width);
 }
 .booking-selection>input,
-.interface {
+.interface,
+.interface-btour {
     display: none;
 }
 .booking-selection > div {
@@ -809,21 +810,23 @@ footer::before {
     position: relative;
     display: inline-block;
     text-transform: uppercase;
-    padding: .5rem 5rem .5rem 5rem;
+    padding: .5rem clamp(2rem,7vw,5rem) .5rem clamp(1rem,7vw,5rem);
     cursor: pointer;
     margin-top: 4rem;
     background-color: var(--color-accent-low);
     color: var(--color-main-20);
-    clip-path: polygon(0 0, 80% 0, 100% 100%, 0 100%);
-    -moz-clip-path: polygon(0 0, 80% 0, 100% 100%, 0 100%);
+    clip-path: polygon(0 0, 85% 0, 100% 100%, 0 100%);
+    -moz-clip-path: polygon(0 0, 85% 0, 100% 100%, 0 100%);
     text-align: start;
-    font-size: 1.5rem;
+    font-size: clamp(1rem, 4.72vw, 1.5rem);
 }
-.booking-selection input:checked + label {
+.booking-selection > label:nth-child(4) {
     background-color: var(--color-accent-high);
 }
 .booking-selection > label:not(:first-of-type) {
-    margin-left: -3.5rem;
+    margin-left: -2rem;
+    clip-path: polygon(0 0, 85% 0, 100% 100%, 15% 100%);
+    -moz-clip-path: polygon(0 0, 85% 0, 100% 100%, 15% 100%);
 }
 .booking-selection > label:nth-child(2) {
     z-index: 3;
@@ -834,10 +837,15 @@ footer::before {
 .booking-selection > label:nth-child(6) {
     z-index: 1;
 }
-#booking-tickets > * {
+.booking-selection input:checked + label {
+    background-color: var(--color-main-20);
+    color: var(--color-accent-high);
+    z-index: 5;
+}
+.booking-styling > * {
     color: white;
 }
-#booking-tickets form {
+.booking-styling form {
     display: flex;
 }
 /* selecting variant */
@@ -848,7 +856,11 @@ footer::before {
 #booking-tickets,
 #booking-first__input,
 #booking-second__input,
-#booking-third__input {
+#booking-third__input,
+#booking-first__input--btour,
+#booking-second__input--btour,
+#booking-third__input--btour
+{
     display: none;
 }
 .booking-selection__btn[value="ticket"]:checked ~ #booking-tickets,
@@ -857,12 +869,15 @@ footer::before {
 .booking-selection__btn[value="done"]:checked ~ #booking-done,
 .interface[value="one"]:checked ~ #booking-first__input,
 .interface[value="two"]:checked ~ #booking-second__input,
-.interface[value="three"]:checked ~ #booking-third__input
+.interface[value="three"]:checked ~ #booking-third__input,
+.interface-btour[value="one"]:checked ~ #booking-first__input--btour,
+.interface-btour[value="two"]:checked ~ #booking-second__input--btour,
+.interface-btour[value="three"]:checked ~ #booking-third__input--btour
 {
     display: flex;
 }
-.booking-tickets__form section:first-of-type,
-.booking-tickets__form section:last-of-type {
+.booking-tickets__form fieldset:first-of-type,
+.booking-tickets__form fieldset:last-of-type {
     flex-direction: column;
     position: relative;
     padding: 2.2rem;
@@ -873,8 +888,26 @@ footer::before {
     flex-wrap: wrap;
     padding: 2.2rem;
     max-width: 40rem;
+    gap: 1.5rem;
 }
-.booking-tickets__form section::before {
+.bt-tickets__selection--container input,
+.bt-tickets__special--text input 
+{
+    font-family: var(--mainFont);
+}
+.bt-tickets__selection--container input::-webkit-outer-spin-button,
+.bt-tickets__selection--container input::-webkit-inner-spin-button,
+.bt-tickets__special--text input::-webkit-outer-spin-button,
+.bt-tickets__special--text input::-webkit-inner-spin-button
+{
+    -webkit-appearance: none;
+}
+.bt-tickets__selection--container input,
+.bt-tickets__special--text input 
+{
+    -moz-appearance: textfield;
+}
+.booking-tickets__form fieldset::before {
     content: '';
     position: absolute;
     inset: 0;
@@ -882,16 +915,25 @@ footer::before {
     mix-blend-mode: multiply;
     z-index: 1;
 }
-.booking-tickets__form section > * {
+fieldset {
+    border: none;
+}
+.booking-tickets__form fieldset > * {
     z-index: 2;
 }
-.booking-tickets__form section > h2 {
+.booking-tickets__form fieldset > h2 {
     text-align: center;
 }
-.booking-tickets__form section h2 {
+.booking-tickets__form fieldset h2 {
     font-size: 1.2rem;
     font-weight: 600;
     margin: 0 0 1rem;
+}
+.bt-tickets__control--buttons {
+    width: 100%;
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
 }
 .bt-form__label {
     cursor: pointer;
@@ -900,7 +942,7 @@ footer::before {
     text-transform: uppercase;
     font-weight: 700;
     border-radius: 4px;
-    padding: .5rem 2rem;
+    padding: .5rem 1.5rem;
     background-color: var(--color-accent-high);
     color: var(--color-main-20);
     transform: translateY(0);
@@ -913,21 +955,31 @@ footer::before {
 }
 .bt-radio__selection {
     display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+}
+.bt-radio__selection--flexresponsive {
+    flex: 1 1 3rem;
+    display: flex;
+    width: 100%;
+    gap: .5rem;
+}
+.bt-radio__selection--flexresponsive label {
+    flex: 1 1 3rem;
+    display: grid;
+    text-align: center;
+    place-items: center;
+    min-width: 3rem;
 }
 .bt-radio__selection input {
     display: none;
 }
 .bt-radio__selection label,
 .bt-radio__selection p {
-    display: grid;
     border: 2px solid var(--color-accent-high);
     text-transform: uppercase;
     height: 4rem;
-    text-align: center;
-    place-items: center;
-    max-width: 3rem;
     font-size: 1.2rem;
-    margin: .2rem
 }
 .bt-radio__selection p {
     background-color: var(--color-main-20);
@@ -965,7 +1017,7 @@ footer::before {
 .unset-flex {
     display: block !important;
 }
-#booking-tickets > div > p {
+.booking-styling > div > p {
     color: white;
 }
 
@@ -1037,12 +1089,13 @@ footer::before {
 }
 .bt-tickets__selection--container input,
 .bt-tickets__special--text input {
-    width: 4rem;
-    padding: .65rem;
+    width: 3rem;
+    padding: .1rem;
     border: none;
     display: block;
     border-radius: 5px;
     text-align: center;
+    font-size: 2rem;
 }
 .bt-tickets__selection--container span {
     font-size: .8rem;
@@ -1063,9 +1116,10 @@ footer::before {
 .bt-tickets__special--text input[type="checkbox"]:checked::before {
     position: absolute;
     content:"\2714";
-    font-size: 1.5rem;
+    font-size: 1.9rem;
     text-align: center;
     inset: 0;
+    color: var(--color-main-20);
 }
 .bt-tickets__donation {
     max-width: 10rem;
