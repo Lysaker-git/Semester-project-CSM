@@ -19,7 +19,6 @@
     
     --base-color: 213, 55%;
     --color-main-20: hsla(var(--base-color), 13%, 100%);
-    --color-main-20-no-alpha: hsl(var(--base-color), 13%);
     --color-main-50: hsla(var(--base-color), 33%, 100%);
 
     --base-accent: 22;
