@@ -723,7 +723,6 @@ footer::before {
     background-color: var(--color-main-20);
     color: var(--color-accent-high);
     text-transform: uppercase;
-    text-overflow: 700;
     font-size: calc(var(--font-size) + .2rem);
     margin: 2em 0 3em 2.2em;
 }
@@ -1195,7 +1194,7 @@ fieldset {
 .evolution div,
 .evolution h2 {
     background-color: #dddddd;
-    width: 100;
+    width: 100%;
     margin: 0;
     padding: 1rem
 }
