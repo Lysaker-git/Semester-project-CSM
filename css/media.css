@@ -34,6 +34,9 @@
         max-height: unset;
         box-shadow: unset;
     }
+    .totals-menu > li > ul > li {
+        width: unset;
+    }
     .totals-menu>li:not(:first-of-type) {
         display: flex;
         flex-direction: column;

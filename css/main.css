@@ -273,6 +273,9 @@ nav label {
     transition: max-height ease-in-out .2s;
     padding: 0;
 }
+.totals-menu > li > ul > li {
+    width: min-content;
+}
 .nav-menu__sub--company:checked ~ .totals-menu__sub--company,
 .nav-menu__sub--company:hover ~ .totals-menu__sub--company,
 .nav-menu__sub--company:focus ~ .totals-menu__sub--company,
@@ -600,7 +603,7 @@ footer::before {
     background-size: 60rem;
     top: -11.05rem;
     left: -10rem;
-    width: 120vw;
+    width: 150vw;
     height: 20rem;
     z-index: -1;
 }
@@ -795,7 +798,8 @@ footer::before {
 }
 .booking-selection>input,
 .interface,
-.interface-btour {
+.interface-btour,
+.interface-bschool {
     display: none;
 }
 .booking-selection > div {
@@ -859,7 +863,10 @@ footer::before {
 #booking-third__input,
 #booking-first__input--btour,
 #booking-second__input--btour,
-#booking-third__input--btour
+#booking-third__input--btour,
+#booking-first__input--bschool,
+#booking-second__input--bschool,
+#booking-third__input--bschool
 {
     display: none;
 }
@@ -872,7 +879,10 @@ footer::before {
 .interface[value="three"]:checked ~ #booking-third__input,
 .interface-btour[value="one"]:checked ~ #booking-first__input--btour,
 .interface-btour[value="two"]:checked ~ #booking-second__input--btour,
-.interface-btour[value="three"]:checked ~ #booking-third__input--btour
+.interface-btour[value="three"]:checked ~ #booking-third__input--btour,
+.interface-bschool[value="one"]:checked ~ #booking-first__input--bschool,
+.interface-bschool[value="two"]:checked ~ #booking-second__input--bschool,
+.interface-bschool[value="three"]:checked ~ #booking-third__input--bschool
 {
     display: flex;
 }
@@ -928,12 +938,13 @@ fieldset {
     font-size: 1.2rem;
     font-weight: 600;
     margin: 0 0 1rem;
+    max-width: max-content;
 }
 .bt-tickets__control--buttons {
-    width: 100%;
+    width: max-content;
     display: flex;
     gap: 1rem;
-    justify-content: flex-end;
+    align-self: flex-end;
 }
 .bt-form__label {
     cursor: pointer;
@@ -1021,81 +1032,36 @@ fieldset {
     color: white;
 }
 
-.bt-tickets__selection--container {
+.grid-tickets {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(6, 1fr);
-    grid-template-areas: 
-    "title-1 price-1 input-1"
-    "title-2 price-2 input-2"
-    "title-3 price-3 input-3"
-    "title-4 price-4 input-4"
-    "title-5 price-5 input-5"
-    "total-p . total"
-    ;
     gap: .5rem;
     max-width: 30rem;
 }
-.bt-tickets__selection--container p:nth-child(1) {
-    grid-area: title-1;
+.grid-tickets *:nth-child(17) {
+    grid-row: 6;
+    grid-column: 3;
 }
-.bt-tickets__selection--container p:nth-child(2) {
-    grid-area: title-2;
+.grid-tour {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr 1fr;
+    gap: .5rem 3rem;
 }
-.bt-tickets__selection--container p:nth-child(3) {
-    grid-area: title-3;
-}
-.bt-tickets__selection--container p:nth-child(4) {
-    grid-area: title-4;
-}
-.bt-tickets__selection--container p:nth-child(5) {
-    grid-area: title-5;
-}
-.bt-tickets__selection--container p:nth-child(6) {
-    grid-area: price-1;
-}
-.bt-tickets__selection--container p:nth-child(7) {
-    grid-area: price-2;
-}
-.bt-tickets__selection--container p:nth-child(8) {
-    grid-area: price-3;
-}
-.bt-tickets__selection--container p:nth-child(9) {
-    grid-area: price-4;
-}
-.bt-tickets__selection--container p:nth-child(10) {
-    grid-area: price-5;
-}
-.bt-tickets__selection--container *:nth-child(11) {
-    grid-area: input-1;
-}
-.bt-tickets__selection--container *:nth-child(12) {
-    grid-area: input-2;
-}
-.bt-tickets__selection--container *:nth-child(13) {
-    grid-area: input-3;
-}
-.bt-tickets__selection--container *:nth-child(14) {
-    grid-area: input-4;
-}
-.bt-tickets__selection--container *:nth-child(15) {
-    grid-area: input-5;
-}
-.bt-tickets__selection--container *:nth-child(16) {
-    grid-area: total-p;
-}
-.bt-tickets__selection--container *:nth-child(17) {
-    grid-area: total;
+.selection-school p {
+    margin-bottom: .5rem;
 }
 .bt-tickets__selection--container input,
 .bt-tickets__special--text input {
-    width: 3rem;
+    max-width: 4rem;
     padding: .1rem;
     border: none;
     display: block;
     border-radius: 5px;
     text-align: center;
     font-size: 2rem;
+    justify-self: stretch;
 }
 .bt-tickets__selection--container span {
     font-size: .8rem;
