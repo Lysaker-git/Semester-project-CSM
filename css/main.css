@@ -1114,8 +1114,10 @@ fieldset {
     border-radius: 5px;
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.6);
 }
-/* Exhibitions page - trying classes over specificity */
-
+/* Exhibitions page */
+#exhib-bio {
+    padding: 0;
+}
 .exhib-flex {
     display: flex;
     flex-wrap: wrap;

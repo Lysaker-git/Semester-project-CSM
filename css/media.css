@@ -10,7 +10,7 @@
         position: absolute;
         top: -80px;
         right: 0;
-        width: 520px;
+        width: 480px;
         height: 10em;
         background: var(--color-main-20);
         clip-path: polygon(100% 50%,100% 71.5%, 2% 71.5%, 0% 62%, 2% 50%);
@@ -42,6 +42,9 @@
         flex-direction: column;
         align-items: flex-end;
         width: 150px;
+    }
+    .totals-menu>li:nth-child(2) {
+        width: 7em;
     }
     .totals-menu>li>ul>li:hover,
     .totals-menu>li>ul>li:focus {
@@ -144,13 +147,4 @@
     .biology img {
         box-shadow: 4px 0 4px rgba(0, 0, 0, 0.4);
     }
-    
-    /* .kids-margin p {
-        background-color: white;
-        position: relative;
-        max-width: 40rem;
-        font-size: clamp(1rem,3vw,1.5rem);
-        line-height: 2.5rem;
-        padding: 3rem;
-    } */
 }
