@@ -531,7 +531,7 @@ h2 {
     font-weight: 300;
 }
 .misc-header__span {
-    color: var(--color-accent-high);
+    color: hsl(22deg 71% 39%);
 }
 .misc-top__items .misc-text, .misc ul {
     padding-bottom: 2.8vh;
